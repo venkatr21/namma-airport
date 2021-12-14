@@ -3,8 +3,8 @@ import {Text, View, StyleSheet, StatusBar} from 'react-native';
 export function HomeScreen() {
   return (
     <View style={styles.container}>
-        <StatusBar showHideTransition='fade' barStyle='default' backgroundColor="#200000"/>
-        <Text></Text>
+        <StatusBar showHideTransition='fade' barStyle='default' backgroundColor="#000000"/>
+        <Text>Hellooo</Text>
     </View>
   );
 }
