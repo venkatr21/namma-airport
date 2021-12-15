@@ -3,30 +3,32 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faHome, faBars, faMapMarkedAlt, faMapMarked, faComment, faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import {HomeScreen} from '../screens/HomeScreen';
+import Theme from '../constants/Theme';
 const Tab = createMaterialBottomTabNavigator();
 
 export default function Navigation() {
   return (
     <Tab.Navigator
     initialRouteName="Home"
-    activeColor="#e91e63"
-    inactiveColor="#4B494A"
+    activeColor= {Theme.activeBackgroundColor}
+    inactiveColor={Theme.inactiveBackgroundColor}
     barStyle={{
-      backgroundColor:'#efefef',
+      backgroundColor: Theme.navigationBarBackground,
       shadowOffset: {width: 1, height: 5},
       shadowColor: '#000',
       shadowOpacity: 1,
       shadowRadius: 7,
       elevation: 3
     }}
-    shifting={true}>
+    shifting={false}
+    >
       <Tab.Screen
           name="Home"
           component={HomeScreen}
           options={{
               tabBarLabel: 'Home',
               tabBarIcon: ({ color, focused }) => (
-                <FontAwesomeIcon icon={ faHome } size={24} color={color} />
+                <FontAwesomeIcon icon={ focused?Theme.homeActiveIcon:Theme.homeInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}
       />
@@ -36,7 +38,7 @@ export default function Navigation() {
           options={{
               tabBarLabel: 'Maps',
               tabBarIcon: ({color, focused}) => (
-                <FontAwesomeIcon icon={ focused?faMapMarkedAlt:faMapMarked } size={24} color={color} />
+                <FontAwesomeIcon icon={ focused?Theme.mapsActiveIcon:Theme.mapsInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}
       />
@@ -46,7 +48,7 @@ export default function Navigation() {
           options={{
               tabBarLabel: 'Chat',
               tabBarIcon: ({ color, focused }) => (
-                <FontAwesomeIcon icon={ focused?faCommentDots:faComment } size={24} color={color} />
+                <FontAwesomeIcon icon={ focused?Theme.chatActiveIcon:Theme.chatInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}
       />
@@ -56,7 +58,7 @@ export default function Navigation() {
           options={{
               tabBarLabel: 'Menu',
               tabBarIcon: ({color, focused}) => (
-                <FontAwesomeIcon icon={ faBars } size={24} color={color} />
+                <FontAwesomeIcon icon={ focused?Theme.menuActiveIcon:Theme.menuInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}
       />
