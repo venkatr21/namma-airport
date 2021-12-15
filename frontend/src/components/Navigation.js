@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHome, faBars, faMapMarkedAlt, faMapMarked, faComment, faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import {HomeScreen} from '../screens/HomeScreen';
 import Theme from '../constants/Theme';
 const Tab = createMaterialBottomTabNavigator();
