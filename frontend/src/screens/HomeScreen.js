@@ -4,7 +4,6 @@ export function HomeScreen() {
   return (
     <View style={styles.container}>
         <StatusBar showHideTransition='fade' barStyle='default' backgroundColor="#000000"/>
-        <Text>Hellooo</Text>
     </View>
   );
 }
@@ -12,5 +11,6 @@ export function HomeScreen() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      backgroundColor: '#fff'
     }
 });
