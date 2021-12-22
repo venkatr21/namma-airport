@@ -12,6 +12,8 @@ target 'frontend' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'frontendTests' do
     inherit! :complete
     # Pods for testing

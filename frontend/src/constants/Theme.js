@@ -13,5 +13,6 @@ const Theme = {
     chatInactiveIcon: faComment,
     menuActiveIcon: faBars,
     menuInactiveIcon: faBars,
+    activityIndicatorColour: '#e91e63'
 }
 export default Theme;

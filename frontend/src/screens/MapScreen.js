@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import {Text, View, StyleSheet, StatusBar, ActivityIndicator} from 'react-native';
 import MapView from 'react-native-maps';
-import MapConstants from '../constants/MapConstants'
+import MapConstants from '../constants/MapConstants';
+import Theme from '../constants/Theme';
 export function MapScreen({navigation}) {
     const [mapCoordinates, setMapCoordinates] = useState(MapConstants);
     const [isLoading, setIsLoading] = useState(true);
@@ -13,7 +14,7 @@ export function MapScreen({navigation}) {
     return (
     <View style={styles.container}>
         <StatusBar showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
-        {isLoading ? (<ActivityIndicator color="#538ae4" size={"large"} />):(
+        {isLoading ? (<ActivityIndicator color={Theme.activityIndicatorColour} size={"large"} />):(
         <MapView
           style={{flex: 1,width: '100%'}}
           initialRegion={{
