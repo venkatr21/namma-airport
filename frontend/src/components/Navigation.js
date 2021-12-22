@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {HomeScreen} from '../screens/HomeScreen';
+import {HomeScreen, MapScreen} from '../screens';
 import Theme from '../constants/Theme';
 const Tab = createMaterialBottomTabNavigator();
 
@@ -33,7 +33,7 @@ export default function Navigation() {
       />
       <Tab.Screen
           name="Maps"
-          component={HomeScreen}
+          component={MapScreen}
           options={{
               tabBarLabel: 'Maps',
               tabBarIcon: ({color, focused}) => (
