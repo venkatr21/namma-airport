@@ -5,7 +5,7 @@ import {HomeScreen, MapScreen, ChatScreen} from '../screens';
 import Theme from '../constants/Theme';
 const Tab = createMaterialBottomTabNavigator();
 
-export default function Navigation() {
+export default function Navigation(props) {
   return (
     <Tab.Navigator
     initialRouteName="Home"
@@ -22,45 +22,45 @@ export default function Navigation() {
     shifting={false}
     >
       <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-              tabBarLabel: 'Home',
-              tabBarIcon: ({ color, focused }) => (
-                <FontAwesomeIcon icon={ focused?Theme.homeActiveIcon:Theme.homeInactiveIcon} size={Theme.navigationIconSize} color={color} />
-              ),
-          }}
-      />
+        name="Home"
+        options={{
+            tabBarLabel: 'Home',
+            tabBarIcon: ({ color, focused }) => (
+              <FontAwesomeIcon icon={ focused?Theme.homeActiveIcon:Theme.homeInactiveIcon} size={Theme.navigationIconSize} color={color} />
+            ),
+        }}>
+        {() => <HomeScreen userInfo = {props.userInfo}/>}
+      </Tab.Screen>
       <Tab.Screen
-          name="Maps"
-          component={MapScreen}
-          options={{
-              tabBarLabel: 'Maps',
-              tabBarIcon: ({color, focused}) => (
-                <FontAwesomeIcon icon={ focused?Theme.mapsActiveIcon:Theme.mapsInactiveIcon} size={Theme.navigationIconSize} color={color} />
-              ),
-          }}
-      />
+        name="Maps"
+        options={{
+            tabBarLabel: 'Maps',
+            tabBarIcon: ({color, focused}) => (
+              <FontAwesomeIcon icon={ focused?Theme.mapsActiveIcon:Theme.mapsInactiveIcon} size={Theme.navigationIconSize} color={color} />
+            ),
+        }}>
+        {() => <MapScreen userInfo = {props.userInfo}/>}
+      </Tab.Screen>
       <Tab.Screen
-          name="Chat"
-          component={ChatScreen}
-          options={{
-              tabBarLabel: 'Chat',
-              tabBarIcon: ({ color, focused }) => (
-                <FontAwesomeIcon icon={ focused?Theme.chatActiveIcon:Theme.chatInactiveIcon} size={Theme.navigationIconSize} color={color} />
-              ),
-          }}
-      />
+        name="Chat"
+        options={{
+            tabBarLabel: 'Chat',
+            tabBarIcon: ({ color, focused }) => (
+              <FontAwesomeIcon icon={ focused?Theme.chatActiveIcon:Theme.chatInactiveIcon} size={Theme.navigationIconSize} color={color} />
+            ),
+        }}>
+        {() => <ChatScreen userInfo = {props.userInfo}/>}
+      </Tab.Screen>
       <Tab.Screen
-          name="Menu"
-          component={HomeScreen}
-          options={{
-              tabBarLabel: 'Menu',
-              tabBarIcon: ({color, focused}) => (
-                <FontAwesomeIcon icon={ focused?Theme.menuActiveIcon:Theme.menuInactiveIcon} size={Theme.navigationIconSize} color={color} />
-              ),
-          }}
-      />
+        name="Menu"
+        options={{
+            tabBarLabel: 'Menu',
+            tabBarIcon: ({color, focused}) => (
+              <FontAwesomeIcon icon={ focused?Theme.menuActiveIcon:Theme.menuInactiveIcon} size={Theme.navigationIconSize} color={color} />
+            ),
+        }}>
+        {() => <HomeScreen userInfo = {props.userInfo}/>}
+      </Tab.Screen>
     </Tab.Navigator>
   );
 }

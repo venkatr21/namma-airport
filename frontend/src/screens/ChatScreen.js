@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import { GiftedChat } from 'react-native-gifted-chat';
 import {ChatBot } from '../components/ChatBot';
+import uuid from 'react-native-uuid';
 
 
 export function ChatScreen ({ navigation }) {
@@ -10,7 +11,27 @@ export function ChatScreen ({ navigation }) {
     useEffect(() => {
         setMessages([
             {
-                _id: 1,
+                _id: uuid.v4(),
+                text: 'Hello developer',
+                createdAt: new Date(),
+                user: {
+                    _id: 2,
+                    name: 'React Native',
+                    avatar: 'https://placeimg.com/140/140/any',
+                },
+            },
+            {
+                _id: uuid.v4(),
+                text: 'Hello developer',
+                createdAt: new Date(),
+                user: {
+                    _id: 1,
+                    name: 'React Native',
+                    avatar: 'https://placeimg.com/140/140/any',
+                },
+            },
+            {
+                _id: uuid.v4(),
                 text: 'Hello developer',
                 createdAt: new Date(),
                 user: {
@@ -20,15 +41,16 @@ export function ChatScreen ({ navigation }) {
                 },
             }
         ])
-    }, [])
+    }, []);
+
     const onSend = useCallback((messages = []) => {
         setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
-    }, [])
+    }, []);
+
     return (
         <ChatBot
             messages={messages}
             isTyping={true}
-            showAvatarForEveryMessage={true}
             onSend={messages => onSend(messages)}
             scrollToBottom={true}
             user={{
