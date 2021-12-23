@@ -6,38 +6,31 @@ import {ChatBot } from '../components/ChatBot';
 import uuid from 'react-native-uuid';
 
 
-export function ChatScreen ({ navigation }) {
+export function ChatScreen ({ navigation, userInfo }) {
     const [messages, setMessages] = useState([]);
     useEffect(() => {
         setMessages([
             {
                 _id: uuid.v4(),
-                text: 'Hello developer',
+                text: 'Hello '+userInfo.user.givenName+', How can i help you today?',
                 createdAt: new Date(),
                 user: {
                     _id: 2,
                     name: 'React Native',
-                    avatar: 'https://placeimg.com/140/140/any',
+                    avatar: require('../../assets/bot.jpg'),
                 },
-            },
-            {
-                _id: uuid.v4(),
-                text: 'Hello developer',
-                createdAt: new Date(),
-                user: {
-                    _id: 1,
-                    name: 'React Native',
-                    avatar: 'https://placeimg.com/140/140/any',
-                },
-            },
-            {
-                _id: uuid.v4(),
-                text: 'Hello developer',
-                createdAt: new Date(),
-                user: {
-                    _id: 2,
-                    name: 'React Native',
-                    avatar: 'https://placeimg.com/140/140/any',
+                quickReplies: {
+                    type: 'radio',
+                    values: [
+                      {
+                        title: 'Hi',
+                        value: 'Hi',
+                      },
+                      {
+                        title: 'Hello, help me find flights',
+                        value: 'Hello, help me find flights',
+                      },
+                    ],
                 },
             }
         ])
