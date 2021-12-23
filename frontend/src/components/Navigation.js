@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {HomeScreen, MapScreen} from '../screens';
+import {HomeScreen, MapScreen, ChatScreen} from '../screens';
 import Theme from '../constants/Theme';
 const Tab = createMaterialBottomTabNavigator();
 
@@ -43,7 +43,7 @@ export default function Navigation() {
       />
       <Tab.Screen
           name="Chat"
-          component={HomeScreen}
+          component={ChatScreen}
           options={{
               tabBarLabel: 'Chat',
               tabBarIcon: ({ color, focused }) => (

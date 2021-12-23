@@ -22,10 +22,9 @@ export default class App extends Component{
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
+      
+      this.setState({isGoogleSignedIn: true});
       this.setState({ userInfo });
-      if(userInfo.user.id!==null){
-        this.setState({isGoogleSignedIn: true});
-      }
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
       } else if (error.code === statusCodes.IN_PROGRESS) {
@@ -36,6 +35,7 @@ export default class App extends Component{
   };
   componentDidMount = async ()=>{
     setTimeout(()=>{
+      // this.signIn();
       this.setState({isLoaded: true})
     },1000)
   }
