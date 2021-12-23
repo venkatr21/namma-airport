@@ -63,3 +63,5 @@ buck-out/
 */local.properties
 
 .env
+
+/config
