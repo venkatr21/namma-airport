@@ -20,6 +20,11 @@ mongoose.connect(mongoConnectionString, { useUnifiedTopology: true, useNewUrlPar
     .then(()=> console.log("Connected to mongoDB"))
     .catch(err => console.log(err));
 
+// Setting up the routes
+const users = require(path.join(__dirname, 'routes','api','users'));
+
+// Using the routes
+app.use("/users", users);
 
 // port for connection
 const port = process.env.PORT || 5000;
