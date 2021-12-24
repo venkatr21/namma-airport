@@ -15,6 +15,7 @@ app.use(compression());         //compress all the route responses
 
 // DB configuration
 const mongoConnectionString = config.get('AzureCosmosMongoConnectionString');
+
 // database connection
 mongoose.connect(mongoConnectionString, { useUnifiedTopology: true, useNewUrlParser: true})
     .then(()=> console.log("Connected to mongoDB"))
