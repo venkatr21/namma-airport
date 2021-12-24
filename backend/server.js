@@ -23,9 +23,11 @@ mongoose.connect(mongoConnectionString, { useUnifiedTopology: true, useNewUrlPar
 
 // Setting up the routes
 const users = require(path.join(__dirname, 'routes','api','users'));
+//const messages = require(path.join(__dirname, 'routes','api','messages'));
 
 // Using the routes
 app.use("/users", users);
+//app.use("/messages", messages);
 
 // port for connection
 const port = process.env.PORT || 5000;

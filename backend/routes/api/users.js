@@ -21,17 +21,16 @@ router.get('/:email',(req,res)=>{
 })
 
 router.post('/',(req,res)=>{
-    var userId = req.body.userId;
+    var id = req.body.id;
     var email = req.body.email;
-    var fullName = req.body.fullName;
-    var firstName = req.body.firstName;
-    var lastName = req.body.lastName;
-    var photoUri = req.body.photoUri;
-    console.log(email);
+    var name = req.body.name;
+    var givenName = req.body.givenName;
+    var familyName = req.body.familyName;
+    var photo = req.body.photo;
     User.find({email: email})
     .then((object)=>{
         const query = { email: email };
-        const update = { $set: { userId: userId, email: email, fullName: fullName, firstName: firstName, lastName: lastName, photoUri: photoUri}};
+        const update = { $set: { id: id, email: email, name: name, givenName: givenName, familyName: familyName, photo: photo}};
         const options = { upsert: true };
         User.updateOne(query, update, options)
         .then((doc)=>{

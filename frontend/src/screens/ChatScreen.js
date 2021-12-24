@@ -8,6 +8,12 @@ import uuid from 'react-native-uuid';
 
 export function ChatScreen ({ navigation, userInfo }) {
     const [messages, setMessages] = useState([]);
+    
+    
+    const onLoadEarlier = async()=>{
+        console.log(userInfo.user);
+    }
+
     useEffect(() => {
         setMessages([
             {
@@ -15,23 +21,10 @@ export function ChatScreen ({ navigation, userInfo }) {
                 text: 'Hello '+userInfo.user.givenName+', How can i help you today?',
                 createdAt: new Date(),
                 user: {
-                    _id: 2,
+                    _id: 'bot',
                     name: 'React Native',
                     avatar: require('../../assets/bot.jpg'),
-                },
-                quickReplies: {
-                    type: 'radio',
-                    values: [
-                      {
-                        title: 'Hi',
-                        value: 'Hi',
-                      },
-                      {
-                        title: 'Hello, help me find flights',
-                        value: 'Hello, help me find flights',
-                      },
-                    ],
-                },
+                }
             }
         ])
     }, []);
@@ -46,6 +39,8 @@ export function ChatScreen ({ navigation, userInfo }) {
             isTyping={true}
             onSend={messages => onSend(messages)}
             scrollToBottom={true}
+            loadEarlier={true}
+            onLoadEarlier={()=>{onLoadEarlier()}}
             user={{
                 _id: 1,
                 name: 'React Native',

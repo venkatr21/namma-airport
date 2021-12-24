@@ -2,14 +2,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/components/Navigation';
 import React,{Component} from 'react';
 import AnimatedSplash from "react-native-animated-splash-screen";
-import { View, StyleSheet, TouchableOpacity, Image, Text } from 'react-native';
+import { View, StyleSheet} from 'react-native';
 import {GoogleSignin,statusCodes, GoogleSigninButton} from '@react-native-google-signin/google-signin';
 import Dim from './src/constants/Dimensions';
-import Config from "react-native-config";
+import {NAMMA_AIRPORT_SERVER, GOOGLE_AUTH_CLIENT_ID} from '@env';
 import LoginForm from './src/components/LoginForm';
+import axios from 'axios';
+
 GoogleSignin.configure({
-  androidClientId: Config.GOOGLE_AUTH_CLIENT_ID
+  androidClientId: GOOGLE_AUTH_CLIENT_ID
 });
+
 export default class App extends Component{
   state = {
     isLoaded: false,
@@ -18,12 +21,22 @@ export default class App extends Component{
     email: null,
     password: null
   }
+
   signIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
-      const userInfo = await GoogleSignin.signIn();
+      var userInfo = await GoogleSignin.signIn();
       this.setState({ userInfo });
-      this.setState({isGoogleSignedIn: true});
+      this.setState({isSigninInProgress: true});
+      axios.post(NAMMA_AIRPORT_SERVER+'users/', this.state.userInfo.user)
+        .then(response => {
+          this.setState({isGoogleSignedIn: true});
+          this.setState({isSigninInProgress: false});
+        })
+        .catch(err =>{
+          this.setState({isGoogleSignedIn: true});
+          this.setState({isSigninInProgress: false});
+        });
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
       } else if (error.code === statusCodes.IN_PROGRESS) {
