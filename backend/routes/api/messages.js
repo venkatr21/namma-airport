@@ -16,7 +16,7 @@ function generateBotReplyForAnswer(answer, requestBody){
         user:{
             _id: "bot",
             name: "Namma Airport Bot",
-            avatar: "some",
+            avatar: "https://nammaairportstorage.blob.core.windows.net/namma-airport/bot.jpg",
         },
         email: requestBody.email,
         _id: uuid.v4()
