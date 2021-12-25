@@ -1,9 +1,50 @@
 const express = require("express");
 const router = express.Router();
 const path = require('path');
-
-
+const axios = require('axios');
+const uuid = require('uuid');
+const config = require('config');
 const Message = require(path.join(__dirname,'..','..', 'models','MessageData'));
+
+const botEndpoint = config.get('BotEndpoint');
+const botEndpointAuth = config.get('BotEndpointAuth');
+
+function generateBotReplyForAnswer(answer, requestBody){
+    var botReply = {
+        text: answer,
+        createdAt: new Date().toISOString(),
+        user:{
+            _id: "bot",
+            name: "Namma Airport Bot",
+            avatar: "some",
+        },
+        email: requestBody.email,
+        _id: uuid.v4()
+    };
+    return botReply;
+}
+
+async function fetchAnswer(question, requestBody){
+    var data = JSON.stringify({
+        "question": question
+    });
+    var config = {
+        method: 'post',
+        url: botEndpoint,
+        headers: { 
+          'Authorization': botEndpointAuth, 
+          'Content-Type': 'application/json',
+        },
+        data : data
+    };
+    var response = await axios(config);
+    try{
+        return generateBotReplyForAnswer(response.data.answers[0].answer, requestBody);
+    }catch{
+        return null;
+    }
+}
+
 
 router.get('/:email',(req,res)=>{
     const email = req.params.email;
@@ -16,14 +57,16 @@ router.get('/:email',(req,res)=>{
     })
 })
 
-router.post('/',(req,res)=>{
-    var doc = new Message(req.body);
-    Message.insertMany(doc)
+router.post('/',async (req,res)=>{
+    var question = req.body.text;
+    var botReply = await fetchAnswer(question, req.body);
+    var userMessage = new Message(req.body);
+    var botMessage = new Message(botReply);
+    Message.insertMany([userMessage, botMessage])
     .then(()=>{  
-        res.sendStatus(200);
+        res.json(botMessage);
     })
     .catch((err)=>{
-        //console.log(err);
         res.sendStatus(400);
     })
 })
