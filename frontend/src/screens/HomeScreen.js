@@ -6,7 +6,7 @@ export function HomeScreen({userInfo}) {
     <View style={styles.container}>
         <StatusBar showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
         <TabBar displayText={"Home"} />
-        <View style={{flex: 0.9}}>
+        <View style={{flex: 0.9, justifyContent: 'center', alignItems: 'center'}}>
         <Text style={{color: '#000'}}>Hello {userInfo.user.name}</Text>
         </View>
     </View>

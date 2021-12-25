@@ -1,6 +1,5 @@
-import React, { useEffect, useCallback, useState, useLayoutEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity,StatusBar } from 'react-native';
-import Theme from '../constants/Theme';
+import React, { useEffect, useCallback, useState } from 'react';
+import { View, Text, StyleSheet,StatusBar } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat';
 import {ChatBot } from '../components/ChatBot';
 import { TabBar } from '../components/TabBar';
