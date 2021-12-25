@@ -4,14 +4,27 @@ import { Avatar } from 'react-native-elements';
 import { GiftedChat } from 'react-native-gifted-chat';
 import {ChatBot } from '../components/ChatBot';
 import uuid from 'react-native-uuid';
-
+import {NAMMA_AIRPORT_SERVER} from '@env';
+import axios from 'axios';
 
 export function ChatScreen ({ navigation, userInfo }) {
     const [messages, setMessages] = useState([]);
     
     
     const onLoadEarlier = async()=>{
-        console.log(userInfo.user);
+        console.log(NAMMA_AIRPORT_SERVER+'messages/'+userInfo.user.email)
+        axios.get('http://2f59-183-82-26-168.ngrok.io/messages/'+userInfo.user.email)
+        .then(response => {
+            try{
+            setMessages(response.data);
+            }catch{
+
+            }
+        })
+        .catch(err =>{
+            console.log(err);
+            //setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+        });
     }
 
     useEffect(() => {
@@ -30,7 +43,17 @@ export function ChatScreen ({ navigation, userInfo }) {
     }, []);
 
     const onSend = useCallback((messages = []) => {
-        setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+        axios.post(NAMMA_AIRPORT_SERVER+'messages/', JSON.stringify({...messages[0], email: userInfo.user.email}))
+        .then(response => {
+            return response.json();
+        })
+        .then(json=>{
+            setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+            console.log(json);
+        })
+        .catch(err =>{
+            setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+        });
     }, []);
 
     return (

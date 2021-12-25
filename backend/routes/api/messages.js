@@ -1,4 +1,3 @@
-const { text } = require("body-parser");
 const express = require("express");
 const router = express.Router();
 const path = require('path');
@@ -23,7 +22,8 @@ router.post('/',(req,res)=>{
     .then(()=>{  
         res.sendStatus(200);
     })
-    .catch(()=>{
+    .catch((err)=>{
+        //console.log(err);
         res.sendStatus(400);
     })
 })

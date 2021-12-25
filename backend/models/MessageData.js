@@ -22,6 +22,7 @@ const QuickReplies = new Schema({
 });
 
 const messageSchema = new Schema({
+    _id: {type: String, required: true},
     email: {type: String, required: true},
     text: { type: String, required: true},
     createdAt: {type: Date, required: true},

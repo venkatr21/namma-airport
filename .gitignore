@@ -64,4 +64,4 @@ buck-out/
 
 .env
 
-/config
+backend/config

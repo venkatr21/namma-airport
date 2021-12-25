@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/4bef45e4-758d-4c27-8899-9287637f88eb/resourceGroups/namma-airport/providers/Microsoft.Web/sites/namma-airport-backend",
+    "appService.deploySubpath": "backend"
+}
