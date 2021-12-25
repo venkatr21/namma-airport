@@ -1,16 +1,19 @@
 import React, { useEffect, useCallback, useState, useLayoutEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Avatar } from 'react-native-elements';
+import { View, Text, StyleSheet, TouchableOpacity,StatusBar } from 'react-native';
+import Theme from '../constants/Theme';
 import { GiftedChat } from 'react-native-gifted-chat';
 import {ChatBot } from '../components/ChatBot';
+import { TabBar } from '../components/TabBar';
 import uuid from 'react-native-uuid';
 import {NAMMA_AIRPORT_SERVER} from '@env';
 import axios from 'axios';
+import { LogBox } from "react-native";
+
+LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 
 export function ChatScreen ({ navigation, userInfo }) {
     const [messages, setMessages] = useState([]);
-    const [isNewConversation, serNewConversation] = useState(true);
-
+    const [isTyping, setIsTyping] = useState(false);
     var botComposeInitialMessage = {
         _id: uuid.v4(),
         text: 'Hello '+userInfo.user.givenName+', How can i help you today?',
@@ -35,14 +38,6 @@ export function ChatScreen ({ navigation, userInfo }) {
     }
     
     useEffect(() => {
-        if(isNewConversation){ 
-            //console.log(botComposeInitialMessage);
-            //console.log(typeof messages)
-            //messages.push([botComposeInitialMessage]);
-            setMessages([
-                botComposeInitialMessage
-            ])
-        }
     }, []);
 
     const onSend = useCallback((messages = []) => {
@@ -54,9 +49,13 @@ export function ChatScreen ({ navigation, userInfo }) {
             },
             data : JSON.stringify({...messages[0], email: userInfo.user.email})
         };
+        setMessages(previousMessages => GiftedChat.append(previousMessages, messages));
+        setIsTyping(true);
         axios(config)
         .then(response => { 
-            setMessages(previousMessages => GiftedChat.append(previousMessages, messages))
+            setMessages(previousMessages => GiftedChat.append(previousMessages, response.data));
+            //console.log(response.data);
+            setIsTyping(false);
         })
         .catch(err =>{
             console.log(err);
@@ -65,20 +64,29 @@ export function ChatScreen ({ navigation, userInfo }) {
     }, []);
 
     return (
-        <ChatBot
+        <View style={[styles.container]}>
+            <StatusBar showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
+            <TabBar displayText={"Help & Support"} />
+            <ChatBot
             messages={messages}
-            isTyping={true}
+            isTyping={isTyping}
             onSend={messages => onSend(messages)}
             scrollToBottom={true}
             loadEarlier={true}
             onLoadEarlier={()=>{onLoadEarlier()}}
+            textInputStyle={{  color: 'black' }}
             user={{
                 _id: 'user',
                 name: userInfo.user.name,
                 avatar: userInfo.user.photo,
             }}
         />
+        </View>
+        
     );
 }
 const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    }
 });

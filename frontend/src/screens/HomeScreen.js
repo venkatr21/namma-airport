@@ -1,12 +1,14 @@
 import * as React from 'react';
-import {Text, View, StyleSheet, StatusBar, ActivityIndicator} from 'react-native';
-import Theme from '../constants/Theme';
+import {Text, View, StyleSheet, StatusBar} from 'react-native';
+import { TabBar } from '../components/TabBar';
 export function HomeScreen({userInfo}) {
   return (
-    <View style={[styles.container]}>
+    <View style={styles.container}>
         <StatusBar showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
-        {/* <ActivityIndicator color={Theme.activityIndicatorColour} size={"large"} /> */}
+        <TabBar displayText={"Home"} />
+        <View style={{flex: 0.9}}>
         <Text style={{color: '#000'}}>Hello {userInfo.user.name}</Text>
+        </View>
     </View>
   );
 }
@@ -14,8 +16,5 @@ export function HomeScreen({userInfo}) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      justifyContent: "center",
-      alignItems: 'center'
     }
 });
