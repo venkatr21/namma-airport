@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import {
   StyleSheet,
   View,
   TextInput,
-  ViewStyle
 } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -14,16 +13,11 @@ function SearchBarWithAutocomplete(props) {
     style,
     onChangeText
   } = props
-  
-  const {
-    container,
-    inputStyle
-  } = styles
   const passedStyles = Array.isArray(style) ? Object.assign({}, ...style) : style
 return (
-    <View style={[container, { ...passedStyles }]}>
+    <View style={[styles.container, { ...passedStyles }]}>
       <TextInput
-        style={inputStyle}
+        style={styles.inputStyle}
         placeholder='Search places within the airport'
         placeholderTextColor='gray'
         value={value}
@@ -43,8 +37,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     backgroundColor: '#fff',
     borderRadius: 10,
-    color: 'black',
     fontSize: 16,
+    elevation: 3
   }
 })
 export default SearchBarWithAutocomplete
