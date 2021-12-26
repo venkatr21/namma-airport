@@ -1,0 +1,203 @@
+{
+    "places":[
+        {
+            "type": "restaurant",
+            "name": "Aubree",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Barley and Grapes cafe",
+            "location":{
+                "latitude": 13.199534005417108,
+                "longitude": 77.7096046433433
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Buffalo Wild Wings",
+            "location":{
+                "latitude": 13.199546300543291, 
+                "longitude": 77.70950759053414
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Café Coffee Day",
+            "location":{
+                "latitude": 13.199189345179258,
+                "longitude": 77.70957264523862
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Chai Point",
+            "location":{
+                "latitude": 13.1999835331709, 
+                "longitude": 77.70987704062267
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Gopizza",
+            "location":{
+                "latitude": 13.199187723138335, 
+                "longitude": 77.70922632358334
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Harvest Market",
+            "location":{
+                "latitude": 13.199540446027477, 
+                "longitude": 77.70940744039298
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Hatti Kaapi",
+            "location":{
+                "latitude": 13.198992857700812, 
+                "longitude": 77.71110697816096
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Häagen-Dazs",
+            "location":{
+                "latitude": 13.1996824155251, 
+                "longitude": 77.70954984535977
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Kebab & Kurry Nation",
+            "location":{
+                "latitude": 13.19798431055468,
+                "longitude": 77.7001734029227
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Krispy Kreme",
+            "location":{
+                "latitude": 13.243718922127918, 
+                "longitude": 77.71722515721093
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Nandi Upachar",
+            "location":{
+                "latitude": 13.199127545374616, 
+                "longitude": 77.70744330851518
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Ooru Canteen",
+            "location":{
+                "latitude": 13.199990400096267, 
+                "longitude": 77.70901813359909
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Pizza Hut",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Chai Point",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Samosa Singh",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Street Foods by Punjab Grill",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Subway",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Starbucks",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "The Belgian Fries Company",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Windmills",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+        {
+            "type": "restaurant",
+            "name": "Bhartiya Jalpan",
+            "location":{
+                "latitude": 13.203786510087554,
+                "longitude": 77.70643063990005
+            },
+            "description": ""
+        },
+
+    ]
+}
