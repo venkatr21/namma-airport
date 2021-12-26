@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, View, StyleSheet, StatusBar} from 'react-native';
+import {Text, View, StyleSheet, StatusBar, KeyboardAvoidingView} from 'react-native';
 import { TabBar } from '../components/TabBar';
 export function HomeScreen({userInfo}) {
   return (
     <View style={styles.container}>
         <StatusBar showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
         <TabBar displayText={"Home"} />
-        <View style={{flex: 0.9, justifyContent: 'center', alignItems: 'center'}}>
+        <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text style={{color: '#000'}}>Hello {userInfo.user.name}</Text>
         </View>
     </View>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, StyleSheet, StatusBar, ActivityIndicator} from 'react-native';
+import {View, StyleSheet, StatusBar, ActivityIndicator, KeyboardAvoidingView} from 'react-native';
 import MapView from 'react-native-maps';
 import MapConstants from '../constants/MapConstants';
 import Theme from '../constants/Theme';

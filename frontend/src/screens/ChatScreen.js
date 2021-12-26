@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react';
-import { View, Text, StyleSheet,StatusBar } from 'react-native';
+import { View, Text, StyleSheet,StatusBar, KeyboardAvoidingView } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat';
 import {ChatBot } from '../components/ChatBot';
 import { TabBar } from '../components/TabBar';
@@ -67,19 +67,19 @@ export function ChatScreen ({ navigation, userInfo }) {
             <StatusBar showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
             <TabBar displayText={"Help & Support"} />
             <ChatBot
-            messages={messages}
-            isTyping={isTyping}
-            onSend={messages => onSend(messages)}
-            scrollToBottom={true}
-            loadEarlier={true}
-            onLoadEarlier={()=>{onLoadEarlier()}}
-            textInputStyle={{  color: 'black' }}
-            user={{
-                _id: 'user',
-                name: userInfo.user.name,
-                avatar: userInfo.user.photo,
-            }}
-        />
+                messages={messages}
+                isTyping={isTyping}
+                onSend={messages => onSend(messages)}
+                scrollToBottom={true}
+                loadEarlier={true}
+                onLoadEarlier={()=>{onLoadEarlier()}}
+                textInputStyle={{  color: 'black' }}
+                user={{
+                    _id: 'user',
+                    name: userInfo.user.name,
+                    avatar: userInfo.user.photo,
+                }}
+            />
         </View>
         
     );
