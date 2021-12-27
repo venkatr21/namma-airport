@@ -6,20 +6,39 @@ import Theme from '../constants/Theme';
 import { TabBar } from '../components/TabBar';
 import Dim from '../constants/Dimensions'
 import SearchBarWithAutocomplete from '../components/SearchBar';
-export function MapScreen({navigation}) {
+import {NAMMA_AIRPORT_SERVER} from '@env';
+import axios from 'axios';
+export function MapScreen({navigation, userInfo}) {
     const [mapCoordinates, setMapCoordinates] = useState(MapConstants);
     const [isLoading, setIsLoading] = useState(true);
     const [search, setSearch] = useState({ term: '' });
-    var searchResult = [{
-      name: "too",
-      position: {lat: 13.203786 ,lon: 77.70643}
-    },
-    {
-      name: "too1",
-      position: {lat: 13.199534,lon: 77.709604}
-    }]
+    const [searchResult, setSearchResult] = useState([])
+    const onSubmitEditing = ()=>{
+      if(search.term.length>0){
+        var config = {
+          method: 'post',
+          url: NAMMA_AIRPORT_SERVER+'search/',
+          headers: { 
+            'Content-Type': 'application/json'
+          },
+          data : JSON.stringify({search: search.term, email: userInfo.user.email})
+        };
+
+        axios(config)
+        .then(response=>{
+          if(response.status==200)
+          setSearchResult(response.data);
+        })
+        .catch(err=>{
+          console.log(err)
+        })
+      }else{
+        setSearchResult([]);
+      }
+      
+    }
+    
     React.useEffect(() => {
-      console.log(search);
         setIsLoading(true);
         setMapCoordinates(MapConstants);
         setIsLoading(false);
@@ -52,7 +71,8 @@ export function MapScreen({navigation}) {
           <View style={styles.searchView}>
             <SearchBarWithAutocomplete
                 value={search.term}
-                onChangeText={(text) => setSearch({ term: text })}/>
+                onChangeText={(text) => setSearch({ term: text })}
+                onSubmitEditing = {()=> onSubmitEditing()}/>
           </View>
         </View>
     </View>

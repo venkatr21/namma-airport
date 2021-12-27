@@ -13,7 +13,7 @@ router.post('/',(req,res)=>{
     const email = req.body.email;
     const search = req.body.search;
     
-    var mapSearchUri = mapSearchHost+"?subscription-key="+azureMapsEndpointKey+"&api-version=1.0&query="+search+"&limit=5&lat=13.198623625191303&lon=77.70503811186883&radius=2000";
+    var mapSearchUri = mapSearchHost+"?subscription-key="+azureMapsEndpointKey+"&api-version=1.0&query="+search+"&lat=13.198623625191303&lon=77.70503811186883&radius=2000";
     var reqConfig = {
         method: 'get',
         url: mapSearchUri,
@@ -47,6 +47,11 @@ router.post('/',(req,res)=>{
         //console.log(err);
         res.sendStatus(400);
     })
+})
+
+router.get('/crowd',(req,res)=>{
+    var population = Math.floor((Math.random() * 3000) + 500);
+    res.json({crowd: population});
 })
 
 module.exports = router;

@@ -11,7 +11,8 @@ function SearchBarWithAutocomplete(props) {
   const {
     value,
     style,
-    onChangeText
+    onChangeText,
+    onSubmitEditing
   } = props
   const passedStyles = Array.isArray(style) ? Object.assign({}, ...style) : style
 return (
@@ -22,6 +23,7 @@ return (
         placeholderTextColor='gray'
         value={value}
         onChangeText={onChangeText}
+        onSubmitEditing={onSubmitEditing}
         returnKeyType='search'
       />
       {/* <FontAwesomeIcon icon={ faSearch } size={28} color={ 'black'} /> */}
@@ -38,6 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 10,
     fontSize: 16,
+    color: 'black',
     elevation: 3
   }
 })
