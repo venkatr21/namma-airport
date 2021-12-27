@@ -22,11 +22,29 @@ router.post('/',(req,res)=>{
     axios(reqConfig)
     .then(response=>{
         var result = response.data.results;
-        const returnResult = []
-        res.sendStatus(200);
+        var returnRes = [];
+        const categories = new Set();
+        result.forEach(obj=>{
+            returnRes.push({name: obj.poi.name, position: obj.position});
+            obj.poi.categories.forEach(category=>{
+                categories.add(category);
+            })
+        })
+
+        var categoriesArray = Array.from(categories);
+        if(categoriesArray.length>0){
+            var doc = new Search({email: email, search: categoriesArray})
+            Search.insertMany([doc])
+            .then(()=>{
+            })
+            .catch((err)=>{
+                //console.log(err);
+            })
+        }
+        res.json(returnRes);
     })
     .catch(err=>{
-        console.log(err);
+        //console.log(err);
         res.sendStatus(400);
     })
 })
