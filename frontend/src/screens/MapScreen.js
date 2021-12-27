@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, StyleSheet, StatusBar, ActivityIndicator, KeyboardAvoidingView} from 'react-native';
+import {View, StyleSheet, StatusBar, ActivityIndicator, Text} from 'react-native';
 import MapView, {Marker} from 'react-native-maps';
 import MapConstants from '../constants/MapConstants';
 import Theme from '../constants/Theme';
@@ -7,6 +7,7 @@ import { TabBar } from '../components/TabBar';
 import Dim from '../constants/Dimensions'
 import SearchBarWithAutocomplete from '../components/SearchBar';
 import {NAMMA_AIRPORT_SERVER} from '@env';
+import PassengerCount from '../components/PassengerCount';
 import axios from 'axios';
 export function MapScreen({navigation, userInfo}) {
     const [mapCoordinates, setMapCoordinates] = useState(MapConstants);
@@ -74,6 +75,8 @@ export function MapScreen({navigation, userInfo}) {
                 onChangeText={(text) => setSearch({ term: text })}
                 onSubmitEditing = {()=> onSubmitEditing()}/>
           </View>
+
+          <PassengerCount />
         </View>
     </View>
   );

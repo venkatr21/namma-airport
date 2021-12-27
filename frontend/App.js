@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/components/Navigation';
 import React,{Component} from 'react';
 import AnimatedSplash from "react-native-animated-splash-screen";
-import { View, StyleSheet} from 'react-native';
+import { View, StyleSheet, StatusBar} from 'react-native';
 import {GoogleSignin,statusCodes, GoogleSigninButton} from '@react-native-google-signin/google-signin';
 import Dim from './src/constants/Dimensions';
 import {NAMMA_AIRPORT_SERVER, GOOGLE_AUTH_CLIENT_ID} from '@env';
@@ -61,21 +61,24 @@ export default class App extends Component{
         logoHeight={Dim.WindowHeight}
         logoWidth={Dim.WindowWidth}
       >
-        <NavigationContainer>
-          {!this.state.isGoogleSignedIn? (
-            <View style={styles.GoogleSigninContainer}>
-                <LoginForm />
-                <GoogleSigninButton
-                  size={GoogleSigninButton.Size.Wide}
-                  color={GoogleSigninButton.Color.Dark}
-                  onPress={this.signIn}
-                  disabled={this.state.isSigninInProgress} 
-                />
-            </View>
-          ): (
-            <Navigation userInfo={this.state.userInfo} />
-          )}
-        </NavigationContainer>
+        <View style={{flex:1}}>
+          <StatusBar style="auto" showHideTransition='slide' backgroundColor="#e91e63"/>
+          <NavigationContainer>
+            {!this.state.isGoogleSignedIn? (
+              <View style={styles.GoogleSigninContainer}>
+                  <LoginForm />
+                  <GoogleSigninButton
+                    size={GoogleSigninButton.Size.Wide}
+                    color={GoogleSigninButton.Color.Dark}
+                    onPress={this.signIn}
+                    disabled={this.state.isSigninInProgress} 
+                  />
+              </View>
+            ): (
+              <Navigation userInfo={this.state.userInfo} />
+            )}
+          </NavigationContainer>
+        </View>
       </AnimatedSplash>
     )
   }
@@ -84,7 +87,7 @@ export default class App extends Component{
 const styles = StyleSheet.create({
   GoogleSigninContainer: {
     backgroundColor: '#000',
-    flex: 1,
+    flexGrow: 1,
     width: Dim.WindowWidth,
     justifyContent: 'center',
     alignItems: 'center',

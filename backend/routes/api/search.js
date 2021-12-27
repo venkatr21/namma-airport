@@ -50,6 +50,7 @@ router.post('/',(req,res)=>{
 })
 
 router.get('/crowd',(req,res)=>{
+    // random airport crowd generating endpoint, to be modified with actual iot data from the airport (to be implemented)
     var population = Math.floor((Math.random() * 3000) + 500);
     res.json({crowd: population});
 })
