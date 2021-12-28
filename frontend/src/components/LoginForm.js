@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Theme from '../constants/Theme';
-import { View, StyleSheet, TouchableOpacity, Image, Text } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image, Text, ToastAndroid } from 'react-native';
 import FormButton from './FormButton';
 import FormInput from './FormInput';
 const LoginForm = () => {
@@ -31,6 +31,13 @@ const LoginForm = () => {
             />
             <FormButton
                 buttonTitle="Sign In"
+                onPress={()=>{
+                  ToastAndroid.showWithGravity(
+                    "Sign in not configured, use Google Sign In",
+                    ToastAndroid.LONG,
+                    ToastAndroid.CENTER
+                  );
+                }}
             />
             <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
                 <Text style={styles.navButtonText}>Forgot Password?</Text>
