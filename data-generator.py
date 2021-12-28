@@ -5,7 +5,7 @@ f = open('./airport-data.json')
 data = json.load(f)
 
 baseUrl = "https://www.bengaluruairport.com"
-baseFileName = "./frontend/assets/imgs/"
+baseFileName = "./assets/imgs/"
 
 
 for i in data["places"]:
