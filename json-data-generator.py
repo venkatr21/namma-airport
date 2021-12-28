@@ -12,7 +12,7 @@ def cleanhtml(raw_html):
 for obj in data["places"]:
     name = obj["title"]
     desc = obj["description"]
-    type = obj["title"]
+    type = obj["type"]
     phoneNumbers = obj["phoneNumbers"]
     image = name+'.jpg'
     location = obj["location"]
