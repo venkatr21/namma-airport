@@ -17,8 +17,7 @@ const width = Dim.ScreenWidth;
 
 
 export function DetailScreen({navigation, route}){
-  const house = route.params[0];
-  console.log(house);
+  const house = route.params;
 
   const InteriorCard = ({interior}) => {
     return <Image source={interior} style={style.interiorImage} />;

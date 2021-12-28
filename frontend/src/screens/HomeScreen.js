@@ -1,9 +1,8 @@
 import React from 'react';
 import {Text, View, StyleSheet, StatusBar, KeyboardAvoidingView} from 'react-native';
 import { TabBar } from '../components/TabBar';
-import houses from '../constants/houses';
 import HomePageCarousel from '../components/HomePageCarousel';
-export function HomeScreen({userInfo}) {
+export function HomeScreen({userInfo, navigation}) {
   return (
     <View style={styles.container}>
         <StatusBar  showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
@@ -11,7 +10,7 @@ export function HomeScreen({userInfo}) {
         <View style={{flexGrow: 1, alignItems: 'center'}}>
           <View style={styles.homepageCarousel}>
             <Text style={styles.homepageCarouselText}>Your personalized recommendations</Text>
-            <HomePageCarousel userInfo={userInfo} />
+            <HomePageCarousel navigation={navigation.navigation} userInfo={userInfo} />
           </View>
         </View>
     </View>

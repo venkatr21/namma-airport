@@ -30,7 +30,7 @@ function DisplayTabs({props, navigation}) {
                 <FontAwesomeIcon icon={ focused?Theme.homeActiveIcon:Theme.homeInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}>
-          {() => <HomeScreen userInfo = {props.userInfo}/>}
+          {() => <HomeScreen navigation={navigation} userInfo = {props.userInfo}/>}
         </Tab.Screen>
         <Tab.Screen
           name="Maps"

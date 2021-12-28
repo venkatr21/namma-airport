@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Carousel,{Pagination} from 'react-native-snap-carousel';
 import Dim from '../constants/Dimensions';
-import {View, StyleSheet, Text, Image, Dimensions} from 'react-native';
+import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 import Theme from '../constants/Theme';
 import {AZURE_STORAGE_BLOB_CONTAINER, NAMMA_AIRPORT_SERVER} from '@env';
 import axios from 'axios';
@@ -33,14 +33,14 @@ export default class HomePageCarousel extends Component {
     }
     _renderItem = ({item, index}) => {
         return (
-            <View style={styles.container} key={index}>
+            <TouchableOpacity style={styles.container} key={index} onPress={()=>{this.props.navigation.navigate('Detail', item)}}>
                 <Image
                     source={{uri: AZURE_STORAGE_BLOB_CONTAINER+item.image}}
                     style={styles.image}
                 />
                 <Text style={styles.header}>{item.name}</Text>
                 <Text style={styles.body}>{item.description.slice(0,80)} ...</Text>
-            </View>
+            </TouchableOpacity>
         );
     }
     get pagination () {
@@ -74,7 +74,7 @@ export default class HomePageCarousel extends Component {
                 ref={(c) => { this._carousel = c; }}
                 data={this.state.recommendation}
                 renderItem={this._renderItem}
-                layout="tinder"
+                // layout="tinder"
                 layoutCardOffset={8}
                 sliderWidth={SLIDER_WIDTH}
                 itemWidth={ITEM_WIDTH}
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.29,
         shadowRadius: 4.65,
         elevation: 7,
-        maxHeight: 300
+        maxHeight: 320
       },
       image: {
         width: ITEM_WIDTH,
