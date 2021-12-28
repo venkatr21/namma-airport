@@ -9,6 +9,7 @@ import {
   Pressable,
 } from 'react-native';
 import COLORS from '../constants/Colors';
+import house from '../constants/houses';
 export function OnBoardScreen({navigation}){
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
@@ -42,7 +43,7 @@ export function OnBoardScreen({navigation}){
           justifyContent: 'flex-end',
           paddingBottom: 40,
         }}>
-        <Pressable onPress={() => navigation.navigation.navigate('Home')}>
+        <Pressable onPress={() => navigation.navigation.navigate('Detail', house)}>
           <View style={style.btn}>
             <Text style={{color: 'white', fontSize: 18}}>Get Started</Text>
           </View>
