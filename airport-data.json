@@ -1,203 +1,838 @@
 {
-    "places":[
+    "places": [
         {
-            "type": "restaurant",
-            "name": "Aubree",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "bia@aubree.in",
+        "contactName": "Mr. Shivaraj",
+        "description": "<p>Aubree is all about inspiration, joy, passion, happiness. It has been since 2011 Aubree began creating the elixir called chocolates for the mortals.&nbsp; Aubree`s&nbsp;&nbsp; chocolates and cakes will rule and overwhelm your sensory perceptions. We go that extra mile to delight our customers with our range of products extending from cupcakes, cakes, chocolates, &nbsp;savouries, macrons platters etc that are truly authentic, and tastes best.Aubree is not only sourcing the highest quality ingredients from Belgium, but also from around the world to create fusion of flavor and taste by blending indigenous recipes from around the world.</p>\n<p>Aubree provides excellent and pro-active service, creative, unique design and customized service and paramount attention is given to detail, texture, consistency color, flavor, &nbsp;aroma, and taste to deliver the most tempting and&nbsp; distinctive chocolates and cakes.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-04-25T07:59:45.557+0000",
+        "location": "Kerb Side, Outside Domestic Departure Gate #1",
+        "logo": "/content/dam/bial/global/quad/Aubree.jpg",
+        "logoAlt": "Bakery",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9663613876"
+        ],
+        "startTime": "",
+        "title": "Aubree",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Barley and Grapes cafe",
-            "location":{
-                "latitude": 13.199534005417108,
-                "longitude": 77.7096046433433
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "barleyandgrapescafe@gmail.com",
+        "contactName": "B&G Stores",
+        "description": "<p>For more than five years, Barley and Grapes Café has been providing Bangalore with a highly appreciated European style café ambience paired with great food and fabulous beverages. Now present in Phoenix Market City, Whitefield, Sahakar Nagar and Kempegowda International airport, Barley and Grapes Café is well known as a great place to hang out with friends and loved ones in an eco-friendly ambience that makes great use of upcycled wood and furniture to create a clean clutter free environment that’s easy on the eye, friendly and inviting.</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-03T06:11:11.852+0000",
+        "location": "The Quad by BLR, Opposite Arrivals",
+        "logo": "/content/dam/bial/global/logo/retail-food/barley-grapes.png",
+        "logoAlt": "Barley & Grape Cafe Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9606642323"
+        ],
+        "startTime": "",
+        "title": "Barley & Grape Cafe",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Buffalo Wild Wings",
-            "location":{
-                "latitude": 13.199546300543291, 
-                "longitude": 77.70950759053414
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "manish@espicelounge.com",
+        "contactName": "Mr. Manis ",
+        "description": "<p>Buffalo Wild Wings is the ultimate place to get together with your friends, watch sports, drink beer and eat wings. You will find a collection of carefully curated dishes like Wings, Burgers, Nachos, Quesadilla, Wraps, Salads, Sizzlers etc with our bold and unique flavors . Buffalo wild wings is a Lively sports-bar chain dishing up wings &amp; other American pub grub amid lots of large-screen TVs.</p>\n",
+        "endTime": "23:00",
+        "lastModified": "2021-09-23T07:32:22.292+0000",
+        "location": "The Quad by BLR, Opposite Arrival",
+        "logo": "/content/dam/bial/global/logo/retail-food/BWW-Logo.jpg",
+        "logoAlt": "Buffalo Wild Wings",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-9969272525"
+        ],
+        "startTime": "11:00",
+        "title": "Buffalo Wild Wings",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Café Coffee Day",
-            "location":{
-                "latitude": 13.199189345179258,
-                "longitude": 77.70957264523862
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": null,
+        "contactName": "CCD Store",
+        "description": "<p>Café Coffee Day, a part of Coffee Day Global Limited, is India’s favourite hangout for coffee and conversation. Popularly known as CCD, we strive to provide the best experience to our guests. Our coffees are sourced from thousands of small coffee planters, who made us who we are today and we're glad to be a part of their lives. The pioneer of the coffee shop culture in India provides the perfect place to hang out and have a ton of fun over a coffee. Classic coffees such as Cappuccino and Americano are like gastronomic fuel for national as well as international travellers.</p>\n<p style=\"margin-top: 0.0pt; margin-bottom: 0.0pt; margin-left: 0.0in; text-align: left; direction: ltr; unicode-bidi: embed;\"><b>&nbsp;</b></p>\n<p style=\"margin-top: 0.0pt; margin-bottom: 0.0pt; margin-left: 0.0in; text-align: left; direction: ltr; unicode-bidi: embed;\"><b>&nbsp;</b><i></i><u></u><sub></sub><sup></sup><strike></strike></p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-20T07:59:08.084+0000",
+        "location": "The Quad by BLR, Opposite Arrivals",
+        "logo": "/content/dam/bial/global/logo/retail-food/CCD.png",
+        "logoAlt": "CCD ",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-7676220952"
+        ],
+        "startTime": "",
+        "title": "Café Coffee Day",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Chai Point",
-            "location":{
-                "latitude": 13.1999835331709, 
-                "longitude": 77.70987704062267
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": null,
+        "contactName": "CCD Store",
+        "description": "<p>Café Coffee Day, a part of Coffee Day Global Limited, is India’s favourite hangout for coffee and conversation. Popularly known as CCD, we strive to provide the best experience to our guests. Our coffees are sourced from thousands of small coffee planters, who made us who we are today and we're glad to be a part of their lives. The pioneer of the coffee shop culture in India provides the perfect place to hang out and have a ton of fun over a coffee. Classic coffees such as Cappuccino and Americano are like gastronomic fuel for national as well as international travellers.</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-03T06:15:00.425+0000",
+        "location": "Arrival Hall, Level 0, Opposite Immigration Exit",
+        "logo": "/content/dam/bial/global/logo/retail-food/CCD.png",
+        "logoAlt": "CCD Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-7676220951"
+        ],
+        "startTime": "",
+        "title": "Café Coffee Day ",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Gopizza",
-            "location":{
-                "latitude": 13.199187723138335, 
-                "longitude": 77.70922632358334
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "gaev.m@chaipoint.com",
+        "contactName": "Gaev Mehta",
+        "description": "<p>India’s largest tea retail chain brings you a perfectly brewed cup of chai made with fresh and natural ingredients. With over 10 variants of hot chai, iced-chai and shakes, their bite-sized chai snacks make for perfect accompaniments for Indian Tea. Chai Point sells over 300,000 cups of tea a day!</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-08T04:19:24.813+0000",
+        "location": "Kerb Side, Opposite Arrival Gate",
+        "logo": "/content/dam/bial/global/logo/retail-food/chai-point.png",
+        "logoAlt": "Chai Point Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9513759537"
+        ],
+        "startTime": "",
+        "title": "Chai Point",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Harvest Market",
-            "location":{
-                "latitude": 13.199540446027477, 
-                "longitude": 77.70940744039298
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "hq@gopizza.in",
+        "contactName": "Mr. Raj Kiran",
+        "description": "<p><b>Don‘t Share, Have Your Own!&nbsp;</b></p>\n<p><b>Personal Sized Pizza from Korea&nbsp;</b></p>\n<p>Why should pizza be big and expensive? Why does it take so long? GOPIZZA was born to solve this problem. GOPIZZA serves personal sized pizza within 5-7 minutes</p>\n",
+        "endTime": "",
+        "lastModified": "2021-11-03T07:51:15.080+0000",
+        "location": "The QUAD by BLR, , Opposite Arrivals",
+        "logo": "/content/dam/bial/global/logo/retail-food/Gopizza-logo.jpg",
+        "logoAlt": "GOPIZZA ",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9513121208"
+        ],
+        "startTime": "",
+        "title": "GOPIZZA ",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Hatti Kaapi",
-            "location":{
-                "latitude": 13.198992857700812, 
-                "longitude": 77.71110697816096
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Inspired by the traditional and popular open air food markets, Harvest Market was created to offer airport travellers an authentic and local fresh food market experience. The gourmet menu at Harvest Market bursts with local flavour, using only the freshest ingredients to ensure superior product quality. Much of Harvest Market’s fresh fruit, vegetables, meats and seafood comes from regional suppliers that emulate the fresh food and merchandise display of local market vendors.&nbsp;</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:41:06.918+0000",
+        "location": "Kerb Side, Opposite Departure Gate #4",
+        "logo": "/content/dam/bial/global/logo/retail-food/harvest-market.png",
+        "logoAlt": "Harvest Market Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Harvest Market",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Häagen-Dazs",
-            "location":{
-                "latitude": 13.1996824155251, 
-                "longitude": 77.70954984535977
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "info@hattikaapi.in",
+        "contactName": "Hatti Kaapi",
+        "description": "<p>Let the smell of freshly ground coffee transport you to the courtyard of a typical South Indian household with Hatti Kaapi. Established in 2009, Hatti Kaapi is known for its traditional handcrafted South Indian filter kaapi made from freshly ground coffee powder. Step into bliss with a warm, earthy cup of flavor!&nbsp;</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-03T06:21:19.923+0000",
+        "location": "Kerb Side, Opposite Arrival Gate",
+        "logo": "/content/dam/bial/global/logo/retail-food/hatti-kaapi.png",
+        "logoAlt": "Hatti Kaapi Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9591999437"
+        ],
+        "startTime": "",
+        "title": "Hatti Kaapi",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Kebab & Kurry Nation",
-            "location":{
-                "latitude": 13.19798431055468,
-                "longitude": 77.7001734029227
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "rohit@akbgroup.in",
+        "contactName": "Rohit Murty ",
+        "description": "<p>For more than 50 years, our passion for crafting the perfect flavors and creamiest textures using only the finest ingredients is what has set the Häagen-Dazs brand apart. We’ve never wavered on the principles that made us who we are from the very beginning. Today, the Häagen-Dazs® brand continues to transform the finest ingredients into extraordinary experiences bite by bite.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-04-25T08:08:31.187+0000",
+        "location": "Kerb Side, Opposite Departure Gate #8",
+        "logo": "/content/dam/bial/global/logo/retail-food/haagen-dazs.jpg",
+        "logoAlt": "Häagen-Dazs",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-8553013504"
+        ],
+        "startTime": "",
+        "title": "Häagen-Dazs",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Krispy Kreme",
-            "location":{
-                "latitude": 13.243718922127918, 
-                "longitude": 77.71722515721093
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "KKN@redshore.net",
+        "contactName": "Mr Kaleem Baig",
+        "description": "<p>Kebab &amp; Kurry Nation is a unit of Red shore International Pvt Ltd headquartered in Bangalore. With more than 25 years of experience into food and hospitality industry both in India and Middle East, It has carved a niche benchmark in quality, customer delight and service. Originated in the Turkish kitchen, brought to&nbsp;<b>India; </b>the&nbsp;<b>kebab</b>&nbsp;is one of the most versatile dish. Serving the Bangalore Epicurean crowd at The Quad by BLR.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-05-18T11:09:24.288+0000",
+        "location": "The Quad by BLR, Opposite Arrivals ",
+        "logo": "/content/dam/bial/global/logo/retail-food/KK.jpg",
+        "logoAlt": null,
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9611299666",
+        "+91-9740000098"
+        ],
+        "startTime": "",
+        "title": "Kebab & Kurry Nation ",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Nandi Upachar",
-            "location":{
-                "latitude": 13.199127545374616, 
-                "longitude": 77.70744330851518
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "kk.airportblr@landmarkgroup.in",
+        "contactName": "Sameo",
+        "description": "<p>Krispy Kreme began almost 80 years ago in Winston-Salem, NC Founder, Vernon Rudolph, bought a yeast-raised doughnut recipe from a Chef in New Orleans and even today Krispy Stores use the same Proprietary Recipe that was Used 80 years ago! Krispy Kreme Signature Product is our Original Glazed and world famous “Hot Now” Sign signals to consumers that Krispy Kreme is making fresh doughnuts. Krispy Kreme today has more than 1000 Stores in 21 Countries.<br>\n</p>\n<p>&nbsp;</p>\n",
+        "endTime": "",
+        "lastModified": "2020-12-29T06:45:52.711+0000",
+        "location": "The Quad by BLR, Opposite Arrivals",
+        "logo": "/content/dam/bial/global/logo/retail-food/kripsy-kreme.png",
+        "logoAlt": "Krispy Kreme ",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9916923869",
+        "+91-636691120"
+        ],
+        "startTime": "",
+        "title": "Krispy Kreme ",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Ooru Canteen",
-            "location":{
-                "latitude": 13.199990400096267, 
-                "longitude": 77.70901813359909
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "Nandiupachar.kia@gmail.com",
+        "contactName": "Nandi Upachar",
+        "description": "<p>Experience culinary delight at its best with lip-smacking, authentic South Indian specialties. Indulge in delectable recipes that will captivate your taste buds.&nbsp;</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-03T06:22:33.687+0000",
+        "location": "Adjacent BMTC Stand",
+        "logo": "/content/dam/bial/global/logo/retail-food/nandi-upchar-logo.jpg",
+        "logoAlt": "Nandi Upachar Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9945275540"
+        ],
+        "startTime": "",
+        "title": "Nandi Upachar",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Pizza Hut",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Ooru Canteen- delightfully South Indian is a quick service concept featuring South Indian delicacies, taking its customers on a tour of South India in all its aspects from great design to its traditional food. Ooru Canteen echoes its superior service philosophy meeting international standards, facilitating fast and efficient services with LED menu displays ensuring a speedy service to customers, especially the travelling, greetings and waiting public.&nbsp;</p>\n",
+        "endTime": "",
+        "lastModified": "2021-05-18T11:12:41.115+0000",
+        "location": "Kerb Side, Opposite Departure Gate # 5 ",
+        "logo": "/content/dam/bial/global/logo/retail-food/ooru-canteen.png",
+        "logoAlt": "Ooru Canteen Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Ooru Canteen",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Chai Point",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Pizza Hut is the world’s largest pizza brand with thousands of restaurants worldwide, and a 50-year legacy of leadership and innovation making it a recognized leader in the fast food pizza industry today. Our Pizza Hut Offers a menu that will adequately cover all meal periods, with enough variety and consistency in every product and it’s the perfect place for the customer on the go as well.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-05-18T11:12:16.957+0000",
+        "location": "Kerb Side, Opposite Arrival Gate",
+        "logo": "/content/dam/bial/global/logo/retail-food/pizza-hut.png",
+        "logoAlt": "Pizza Hut Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Pizza Hut",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Samosa Singh",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "piyush@samosasingh.com",
+        "contactName": "Kumar Piyush ",
+        "description": "<p>Samosa Singh aims to recreate &amp; lead the Indian snacks category. Built at the intersection of consumer insights, technology &amp; quality, making it every household’s nostalgic Indian snacks accessible across online &amp; offline channels. What makes Samosa Singh unique is their intuitive fusion of traditional recipes with modern textures &amp; flavors. The brand has sold more than 40 million units.<br>\nSamosa Singh is the only Indian snacking start-up with scientific core team with 100,000 +_ research hours behind its products. &nbsp;</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-20T08:01:20.754+0000",
+        "location": "Kerb Side, Opposite Gate #9",
+        "logo": "/content/dam/bial/global/logo/retail-food/Samosa-Singh.png",
+        "logoAlt": null,
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-8886699319"
+        ],
+        "startTime": "",
+        "title": "Samosa Singh",
+        "type": null
         },
         {
-            "type": "restaurant",
-            "name": "Street Foods by Punjab Grill",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "Sf.blrairport@lbf.co.in",
+        "contactName": "BLR Airport",
+        "description": "<p>Inspired by the food lanes of India, Street Foods by Punjab Grill is your go-to destination to experience indigenous cuisine, culture &amp; community. Treat your taste buds to mouth melting lazeez kebabs, aromatic biryani and authentic masala chai.</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-03T06:29:03.115+0000",
+        "location": "Kerb Side, Opposite Arrival Gate",
+        "logo": "/content/dam/bial/global/logo/retail-food/street-foods-by-punjab-grill.png",
+        "logoAlt": "Street Foods by Punjab Grill Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-8433967151",
+        "+91-7738801444"
+        ],
+        "startTime": "",
+        "title": "Street Foods by Punjab Grill",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Subway",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "gmops@bread-basket.net",
+        "contactName": "Shiam Kumar",
+        "description": "<p>Subway is the world's largest sandwich chain with more than 44,000 outlets in over 111 countries. The brand offers a range of fresh and healthy sandwiches that are made quickly right in front of the customer and has localized quite extensively for the Indian market by offering several Indian favorites like Paneer, Chicken Tikka, Aloo Patty etc. You can find the Subway outlet right at Kerbside at the entrance to the Kempegowda International Airport Bengaluru.</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-03T06:24:31.514+0000",
+        "location": "Kerb Side, Opposite Gate # 10                            ",
+        "logo": "/content/dam/bial/global/logo/retail-food/Subway.png",
+        "logoAlt": "Subway Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9731974700"
+        ],
+        "startTime": "",
+        "title": "Subway",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Starbucks",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "devendra.sharma@TataStarbucks.com",
+        "contactName": "Devendra Sharma",
+        "description": "<p>Enjoy the perfect Starbucks experience &amp; grab the freshly brewed coffee at the Quad, Opposite Arrivals&nbsp;</p>\n",
+        "endTime": "",
+        "lastModified": "2021-04-25T08:08:12.806+0000",
+        "location": "The Quad by BLR, Opposite Arrivals ",
+        "logo": "/content/dam/bial/global/logo/retail-food/Starbucks.jpg",
+        "logoAlt": "TATA Starbucks",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9999103909"
+        ],
+        "startTime": "",
+        "title": "TATA Starbucks",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "The Belgian Fries Company",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "Chandan@whizgroup.in",
+        "contactName": "Mr. Chandan Rai ",
+        "description": "<p>The Original Flavoured Fries Co!&nbsp;</p>\n<p>An international concept, recreating the magic of the streets of Belgium with its fries in 18 flavours- fully loaded, Juicy Burgers, Signature Shakes and Waffles.&nbsp;</p>\n<p>The Belgium Fries Co, is a strong innovative brand with a wide appeal. Offering fresh - made on order, hearty meals at a reasonable pricing. Great for the entire family or a treat for self..</p>\n",
+        "endTime": "",
+        "lastModified": "2021-11-03T07:53:46.591+0000",
+        "location": "The QUAD by BLR, Opposite Arrivals ",
+        "logo": "/content/dam/bial/global/logo/retail-food/Belgian-Fries.jpg",
+        "logoAlt": "The Belgian Fries Company ",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-7042493937"
+        ],
+        "startTime": "",
+        "title": "The Belgian Fries Company ",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Windmills",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "windmills.bial@windmillscraftworks.com",
+        "contactName": "Windmills Store",
+        "description": "<p>Take off with Joy Total Environment Hospitality proudly announces the launch of the new Windmills at The Quad, a dedicated F&amp;B retail plaza outside Bengaluru International Airport (BIAL). Bearing the signature design stamp of Kamal Sagar and Shibanee’s Total Environment, it is set in a horseshoe dome with a green roof, that accentuates the immaculate landscaping, fine woodwork, exposed brick cladding and international brasserie-style ambience. Come, relive the charm of our Whitefield microbrewery at Bengaluru airport.</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-03T06:25:21.152+0000",
+        "location": "The Quad by BLR, Opposite Arrivals",
+        "logo": "/content/dam/bial/global/logo/retail-food/windmills-craftworks.png",
+        "logoAlt": "Windmills Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9148733329"
+        ],
+        "startTime": "",
+        "title": "Windmills",
+        "type": "food-beverage"
         },
         {
-            "type": "restaurant",
-            "name": "Bhartiya Jalpan",
-            "location":{
-                "latitude": 13.203786510087554,
-                "longitude": 77.70643063990005
-            },
-            "description": ""
+        "baseLocation": "bial:location/pre-security",
+        "contactEmail": "info@bhartiyajalpan.in",
+        "contactName": "Bhartiya Jalpan Store ",
+        "description": "<p>Launched in 1945 in Guwahati, Assam by Lt. Girdharilal Pareek, Bhartiya Jalpan, still remains one of top Sweet brands in the North-East.The brand philosophy is “taste comes first”, in tandem with quality of the products. Therefore spices, and raw materials are sourced from across India to give every item local authentic feel and the best taste to the customers.Carrying forward the legacy of the brand, and its core principles, “Quality” and “Ethics”, Bhartiya Jalpan Bangalore was launched in 2016 with its flagship outlet in Bengaluru.<br>\n</p>\n<p><b>&nbsp;</b><i></i><u></u><sub></sub><sup></sup><strike></strike></p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-20T08:02:38.022+0000",
+        "location": "The Quad by BLR, Opposite Arrivals",
+        "logo": "/content/dam/bial/global/logo/retail-food/Bhartiya-Jalpan.jpg",
+        "logoAlt": " Bhartiya Jalpan",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9686443672"
+        ],
+        "startTime": "",
+        "title": " Bhartiya Jalpan",
+        "type": null
         },
-
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>7 Tawas serves authentic Indian cuisine from parathas to kathi rolls, pav bhaji to ragda samosa, dal makhani to mutter paneer, pulao to Hyderabadi dum biryani, dosa to uthappam, gulab jamun to rasgulla, flavoured lassis to badam milk. Truly a royal treat before you board your long flight from India!</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:40:50.141+0000",
+        "location": "International Departure, Level 1, Opposite Gate # 35",
+        "logo": "/content/dam/bial/global/logo/retail-food/7Tawas.png",
+        "logoAlt": "7 Tawas Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "7 Tawas",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Located right in the centre of Eat at Bengaluru, Bar serves an array of spirits, beers, wines and chilled beverages. Your perfect destination to kick back and unwind while you wait for your flight.&nbsp;</p>\n",
+        "endTime": "12:00",
+        "lastModified": "2021-05-18T11:10:41.922+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 17",
+        "logo": "/content/dam/bial/global/logo/retail-food/Bar.png",
+        "logoAlt": "Bar Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "09:00",
+        "title": "Bar",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Whether you travel for business or pleasure, a grand send-off is more than a ritual, it’s a necessity. Bar 380 degree presents you the first great memory of your trip before you take off. It’s intentionally named Bar 380 degree to let you experience a twist beyond the usual 360 degrees. The Bar 380 is a mélange of ingenuity, panache and opulence. It invites you to indulge your senses and soak in the environment. So, sit back, take a sip, chill and enjoy the magnificent view of flights taking off from the runway!</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:44:30.329+0000",
+        "location": "International Departure, Level 1, Adjacent to Gate # 37",
+        "logo": "/content/dam/bial/global/logo/retail-food/bar-380.png",
+        "logoAlt": "Bar 380 Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Bar 380",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": null,
+        "contactName": "CCD Store",
+        "description": "<p>Café Coffee Day, a part of Coffee Day Global Limited, is India’s favourite hangout for coffee and conversation. Popularly known as CCD, we strive to provide the best experience to our guests. Our coffees are sourced from thousands of small coffee planters, who made us who we are today and we're glad to be a part of their lives. The pioneer of the coffee shop culture in India provides the perfect place to hang out and have a ton of fun over a coffee. Classic coffees such as Cappuccino and Americano are like gastronomic fuel for national as well as international travellers.</p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-06T06:07:15.390+0000",
+        "location": "Check in Hall, level 0, Adjacent to Departure Gate # 4",
+        "logo": "/content/dam/bial/global/logo/retail-food/CCD.png",
+        "logoAlt": "CCD Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-7676220953"
+        ],
+        "startTime": "",
+        "title": "Café Coffee Day ",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>The lively and natural atmosphere of the space forms a canvas for food presentations combined with a market area where one can relish hot soups, freshly made juices, nutritious smoothies, garden fresh salads and made to order gourmet sandwiches. Experience freshness pick up your choice of healthy food &amp; beverages, quick pay, move on and STAY HEALTHY...!</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:38:49.632+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 16",
+        "logo": "/content/dam/bial/global/logo/retail-food/fresh-healthy.png",
+        "logoAlt": "Fresh & Healthy Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Fresh & Healthy",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Designed exclusively for bus gates, the Hello Goodbye Bar offers a wide range of beers along with tasty snacking options. Chug down a few beers or premium liquors before you board your flight at the Kempegowda International Airport!</p>\n",
+        "endTime": "00:00",
+        "lastModified": "2021-01-28T03:57:27.054+0000",
+        "location": "Domestic Departure, Level 0, Opposite Gate # 20",
+        "logo": "/content/dam/bial/global/logo/retail-food/hello-goodbye-bar.png",
+        "logoAlt": "Hello Good Bye Bar Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "09:30",
+        "title": "Hello GoodBye Bar",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Dig into the delicious, freshly made chicken dishes made with unique, signature recipes and innovative flavors at the world’s most popular chicken restaurant chain, KFC! With enough variety to please any palate and crowd favorites like Crispy Strips, Popcorn Chicken, Hot &amp; Crispy Chicken, Rizos, Zingers, Burgers, Hot Wings, KFC is truly a treat for the travellers of Kempegowda International Airport Bengaluru.</p>\n",
+        "endTime": "00:00",
+        "lastModified": "2021-05-18T11:11:23.644+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 28",
+        "logo": "/content/dam/bial/global/logo/retail-food/KFC-Logo.jpg",
+        "logoAlt": "KFC Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "04:00",
+        "title": "KFC",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Krispy Kreme began almost 80 years ago in Winston-Salem, NC Founder, Vernon Rudolph, bought a yeast-raised doughnut recipe from a Chef in New Orleans and even today Krispy Stores use the same Proprietary Recipe that was Used 80 years ago! Krispy Kreme Signature Product is our Original Glazed and world famous “Hot Now” Sign signals to consumers that Krispy Kreme is making fresh doughnuts. Krispy Kreme today has more than 1000 Stores in 21 Countries</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:41:17.563+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 28",
+        "logo": "/content/dam/bial/global/logo/retail-food/kripsy-kreme.png",
+        "logoAlt": "Krispy Kreme Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Krispy Kreme",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": " Kathhiravan VR",
+        "description": "<p>La Alta Vita prides itself for its authentic Italian classics such as fresh dough pizza, pasta and grills, offering its customers an elegant &amp; delicious taste of Italy. The tempting specials and distinctive design offer a perfect meal experience, whatever time of day and for any occasion. La Alta Vita caters to everyone, from a quick meal buffet, a pizza, a nutritious salad, a double espresso along with mouthwatering a la carte menu options and takeaways.</p>\n",
+        "endTime": "23:00",
+        "lastModified": "2021-01-28T03:41:35.079+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 12",
+        "logo": "/content/dam/bial/global/logo/retail-food/alta-vita.png",
+        "logoAlt": "La Alta Vita Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "04:30",
+        "title": "La Alta Vita",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>La Tapenade - Mediterranean Café offers a selection of sandwiches that expresses culinary tradition. Chow down on authentic homemade Arabic mezzes, Persian salad, Greek salad, sandwiches and wraps with unique fillings of cheese and cold meats coupled with the La Tapenade’s gourmet flatbread pizzas.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:59:25.624+0000",
+        "location": "International Departure, Level 1, Opposite to Gate # 33",
+        "logo": "/content/dam/bial/global/logo/retail-food/la-tapenade.png",
+        "logoAlt": "La Tapenade Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "La Tapenade",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": " Kathhiravan VR",
+        "description": "<p>Noodle serves delicious dishes from the various regions in Asia - featuring a variety of appetizers, dim sums, soups, noodles and rice bowls.</p>\n",
+        "endTime": "00:00",
+        "lastModified": "2021-01-28T03:39:10.511+0000",
+        "location": "International Departure, Level 1, Opposite to Gate # 35 ",
+        "logo": "/content/dam/bial/global/logo/retail-food/Noodle.png",
+        "logoAlt": "Noodle Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "12:00",
+        "title": "Noodle",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": " Kathhiravan VR",
+        "description": "<p>Noodle serves delicious dishes from the various regions in Asia - featuring a variety of appetizers, dim sums, soups, noodles and rice bowls.</p>\n",
+        "endTime": "12:00",
+        "lastModified": "2021-01-28T03:40:58.655+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 17",
+        "logo": "/content/dam/bial/global/logo/retail-food/Noodle.png",
+        "logoAlt": "Noodle Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "00:00",
+        "title": "Noodle",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR ",
+        "description": "<p>Puro Gusto is a modern concept in the middle of a Coffee Shop and chic snack offer takeaway. Puro Gusto brings together local and international food habits with the typical Italian way of life; “Barista’s” serving the best beverages, great dishes and combining the latest food and beverage trends. Puro Gusto breaks away from the traditional Italian coffee bars with a new and upgraded sensorial and food experience. Combining three main pillars; the best coffee selection, fresh bakery items and a fine casual food offer.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:38:13.764+0000",
+        "location": "Domestic Departure, Level 1,Opposite Gate # 14",
+        "logo": "/content/dam/bial/global/logo/retail-food/puro-gusto.png",
+        "logoAlt": "Puro Gusto Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Puro Gusto",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Make way for the flavorful Taste of India. Known for its quick service, the outlet is your fastest way to travel throughout India! Relish the best of Indian and fast food on the go.&nbsp; Also famous for their breakfasts, one can crash here on a lazy morning to have an appetizing breakfast!</p>\n",
+        "endTime": "23:00",
+        "lastModified": "2021-01-28T03:37:22.912+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 17",
+        "logo": "/content/dam/bial/global/logo/retail-food/taste-of-india.png",
+        "logoAlt": "Taste of India Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "04:00",
+        "title": "Taste of India",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Enjoy a fast snack break or a more wholesome meal by just picking them from the display shelves of Taste of India Express. This wonderful quick-serve Indian joint has something for every palate. Don’t forget to grab your pre-packed drinks for takeaway with handy snacks and more!</p>\n",
+        "endTime": "00:00",
+        "lastModified": "2021-01-28T03:37:55.595+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 17",
+        "logo": "/content/dam/bial/global/logo/retail-food/taste-of-india-express.png",
+        "logoAlt": "Taste of India Express Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "04:00",
+        "title": "Taste of India Express",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "ashish.mishra@tataconsumer.com",
+        "contactName": "Ashish Mishra",
+        "description": "<p>Tata Cha is on a&nbsp; mission to serve Chai Warmth cup after cup, day after day. With over 12 cafes at major locations in Bengaluru, it is all set to revolutionize the out of home tea drinking experience. At Tata Cha, the essence of our offerings is rooted in being authentically Indian and yet, modern and contemporary. Having served more than 100000 cups of Chai, over 80000 plates of breakfast, snacks, meals, dunkers &amp; more, customers have absolutely loved the Cha experience.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-05-18T11:08:39.623+0000",
+        "location": "Domestic Departure, Level 0, Opposite Gate # 7",
+        "logo": "/content/dam/bial/global/logo/retail-food/TATA-Cha.jpg",
+        "logoAlt": "Tata Cha ",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9096126368"
+        ],
+        "startTime": "",
+        "title": "Tata Cha ",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Let the authentic taste of a South Indian household enchant your taste buds. The finest ingredients and original recipes come together at Tiffin Centre offering a gastronomical opportunity to relish the true South of India from the provinces of Karnataka, Kerala, Tamil Nadu &amp; Andhra Pradesh. A grand culinary treat awaits you at Tiffin Centre!</p>\n",
+        "endTime": "23:00",
+        "lastModified": "2021-01-28T03:34:33.711+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 02",
+        "logo": "/content/dam/bial/global/logo/retail-food/tiffin-center.png",
+        "logoAlt": "Tiffin Centre Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "04:00",
+        "title": "Tiffin Centre",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": "Kathhiravan VR",
+        "description": "<p>Dig into piping hot Vadas, Podi Idli, Bhajji, Degree Coffee, Meter Chai and more authentic South Indian delights, paired with thundering fast service at Tiffin Express. Tuck into a delicious meal at an affordable price, when the pangs of hunger strike.</p>\n",
+        "endTime": "23:00",
+        "lastModified": "2021-01-28T03:32:53.001+0000",
+        "location": "Domestic Departure, Level 0, Adjacent to Gate # 20",
+        "logo": "/content/dam/bial/global/logo/retail-food/tiffin-express.png",
+        "logoAlt": "Tiffin Express Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "04:00",
+        "title": "Tiffin Express",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "kathhiravan.radhakrishnan@hmshost.net",
+        "contactName": " Kathhiravan VR",
+        "description": "<p>Dig into piping hot Vadas, Podi Idli, Bhajji, Degree Coffee, Meter Chai and more authentic South Indian delights, paired with thundering fast service at Tiffin Express. Tuck into a delicious meal at an affordable price, when the pangs of hunger strike.</p>\n",
+        "endTime": "00:00",
+        "lastModified": "2021-01-28T03:34:09.079+0000",
+        "location": "Domestic Departure, Level 1, Opposite Gate # 02",
+        "logo": "/content/dam/bial/global/logo/retail-food/tiffin-express.png",
+        "logoAlt": "Tiffin Express Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "02:30",
+        "title": "Tiffin Express",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": null,
+        "contactName": "UFM Stores",
+        "description": "<p>Dig into drool-worthy street style food on the go at the Kempegowda International Airport. Managed by experts who understand the importance of quick service of yummy bites, Urban Food Market is a trendy “Food to Go” joint at the BLR Airport. Savour the true flavours of delicious Pizzas, Desserts &amp; lots more on the go.</p>\n",
+        "endTime": "00:00",
+        "lastModified": "2020-12-22T08:35:20.681+0000",
+        "location": "Domestic Departure, Level 0, Adjacent to Gate # 20",
+        "logo": "/content/dam/bial/global/logo/retail-food/urban-food-market.png",
+        "logoAlt": "Urban Food Market Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201"
+        ],
+        "startTime": "02:30",
+        "title": "Urban Food Market",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": null,
+        "contactName": "UFM Stores",
+        "description": "<p>Dig into drool-worthy street style food on the go at the Kempegowda International Airport. Managed by experts who understand the importance of quick service of yummy bites, Urban Food Market is a trendy “Food to Go” joint at the BLR Airport. Savour the true flavours of delicious Pizzas, Desserts &amp; lots more on the go.</p>\n",
+        "endTime": "00:00",
+        "lastModified": "2020-12-22T08:35:05.985+0000",
+        "location": "Domestic Departure, Level 0, Adjacent to Gate # 03",
+        "logo": "/content/dam/bial/global/logo/retail-food/urban-food-market.png",
+        "logoAlt": "Urban Food Market Logo Image",
+        "openAlways": false,
+        "phoneNumbers": [
+        "+91-6366911201"
+        ],
+        "startTime": "02:30",
+        "title": "Urban Food Market",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": null,
+        "contactName": "UFM Stores",
+        "description": "<p>Dig into drool-worthy street style food on the go at the Kempegowda International Airport. Managed by experts who understand the importance of quick service of yummy bites, Urban Food Market is a trendy “Food to Go” joint at the BLR Airport. Savour the true flavours of delicious Pizzas, Desserts &amp; lots more on the go.</p>\n",
+        "endTime": "",
+        "lastModified": "2021-01-28T03:36:44.372+0000",
+        "location": "International Departure, Level 1, Adjacent to Gate # 38",
+        "logo": "/content/dam/bial/global/logo/retail-food/urban-food-market.png",
+        "logoAlt": "Urban Food Market Logo Image",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-6366911201",
+        "+91-7406401233"
+        ],
+        "startTime": "",
+        "title": "Urban Food Market",
+        "type": "food-beverage"
+        },
+        {
+        "baseLocation": "bial:location/post-security",
+        "contactEmail": "s149@tatastarbucks.com",
+        "contactName": "Veeresh H ",
+        "description": "<p>Enjoy the perfect Starbucks experience &amp; grab the freshly brewed coffee at the International Departure<br>\n</p>\n<p><b>&nbsp;</b><i></i><u></u><sub></sub><sup></sup><strike></strike></p>\n",
+        "endTime": "",
+        "lastModified": "2020-07-20T07:51:09.914+0000",
+        "location": "International Departure, Level 1 , Opposite to Gate # 33",
+        "logo": "/content/dam/bial/global/logo/retail-food/starbucks-coffee.png",
+        "logoAlt": " Starbucks",
+        "openAlways": true,
+        "phoneNumbers": [
+        "+91-9136960581"
+        ],
+        "startTime": "",
+        "title": " TATA Starbucks",
+        "type": null
+        }
     ]
 }
