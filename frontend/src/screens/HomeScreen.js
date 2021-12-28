@@ -11,7 +11,7 @@ export function HomeScreen({userInfo}) {
         <View style={{flexGrow: 1, alignItems: 'center'}}>
           <View style={styles.homepageCarousel}>
             <Text style={styles.homepageCarouselText}>Your personalized recommendations</Text>
-            <HomePageCarousel houses={houses} />
+            <HomePageCarousel userInfo={userInfo} />
           </View>
         </View>
     </View>

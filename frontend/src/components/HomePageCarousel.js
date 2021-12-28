@@ -3,27 +3,48 @@ import Carousel,{Pagination} from 'react-native-snap-carousel';
 import Dim from '../constants/Dimensions';
 import {View, StyleSheet, Text, Image, Dimensions} from 'react-native';
 import Theme from '../constants/Theme';
-
+import {AZURE_STORAGE_BLOB_CONTAINER, NAMMA_AIRPORT_SERVER} from '@env';
+import axios from 'axios';
 export const SLIDER_WIDTH = Dim.WindowWidth;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.8)
 export default class HomePageCarousel extends Component {
     state = {
-        activeSlide: 0
+        recommendation: [],
+        activeSlide: 0,
+        renderRecommendation: false
+    }
+
+    componentDidMount(){
+        var config = {
+            method: 'get',
+            url: NAMMA_AIRPORT_SERVER+'poi/recommendation/'+this.props.userInfo.user.email,
+            headers: { 
+              'Content-Type': 'application/json'
+            }
+        };
+
+        axios(config)
+        .then(response=>{
+            this.setState({recommendation: response.data, renderRecommendation: true});
+        })
+        .catch(err=>{
+
+        })
     }
     _renderItem = ({item, index}) => {
         return (
             <View style={styles.container} key={index}>
                 <Image
-                    source={item.image}
+                    source={{uri: AZURE_STORAGE_BLOB_CONTAINER+item.image}}
                     style={styles.image}
                 />
-                <Text style={styles.header}>{item.title}</Text>
-                <Text style={styles.body}>{item.details}</Text>
+                <Text style={styles.header}>{item.name}</Text>
+                <Text style={styles.body}>{item.description.slice(0,80)} ...</Text>
             </View>
         );
     }
     get pagination () {
-        const entries = this.props.houses;
+        const entries = this.state.recommendation;
         const { activeSlide } = this.state;
         return (
             <Pagination
@@ -51,10 +72,10 @@ export default class HomePageCarousel extends Component {
             <View>
             <Carousel
                 ref={(c) => { this._carousel = c; }}
-                data={this.props.houses}
+                data={this.state.recommendation}
                 renderItem={this._renderItem}
                 layout="tinder"
-                layoutCardOffset={9}
+                layoutCardOffset={8}
                 sliderWidth={SLIDER_WIDTH}
                 itemWidth={ITEM_WIDTH}
                 autoplay={true}
@@ -80,6 +101,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.29,
         shadowRadius: 4.65,
         elevation: 7,
+        maxHeight: 300
       },
       image: {
         width: ITEM_WIDTH,
