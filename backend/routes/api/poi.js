@@ -35,20 +35,51 @@ router.get('/:name',(req,res)=>{
 })
 
 router.post('/',(req,res)=>{
-    Poi.insertMany(req.body)
-    .then((doc)=>{
+    if(req.body.length>0){
+        Poi.insertMany(req.body)
+        .then((doc)=>{
+            res.sendStatus(200);
+        })
+        .catch((err)=>{
+            console.log(err);
+            res.sendStatus(400);
+        }) 
+    }else{
         res.sendStatus(200);
-    })
-    .catch((err)=>{
-        console.log(err);
-        res.sendStatus(400);
-    }) 
+    }
+    
 })
 
 router.delete('/',(req,res)=>{
     Poi.deleteMany({})
     .then((doc)=>{
         res.sendStatus(200);
+    })
+    .catch((err)=>{
+        res.sendStatus(400);
+    })
+})
+
+router.delete('/:name',(req,res)=>{
+    const name = req.params.name;
+    Poi.deleteMany({name: name})
+    .then((doc)=>{
+        res.sendStatus(200);
+    })
+    .catch((err)=>{
+        res.sendStatus(400);
+    })
+})
+
+router.get('/recommendation/:email',(req,res)=>{
+    const email = req.params.email;
+    Poi.find({})
+    .then((object)=>{
+        if(object.length>4){
+            res.json(object.sort(() => Math.random() - Math.random()).slice(0, 4));
+        }else{
+            res.json(object);
+        }
     })
     .catch((err)=>{
         res.sendStatus(400);
