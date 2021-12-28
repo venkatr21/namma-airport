@@ -9,8 +9,8 @@ import {
   Pressable,
 } from 'react-native';
 import COLORS from '../constants/Colors';
-import house from '../constants/houses';
-export function OnBoardScreen({navigation}){
+import Theme from '../constants/Theme';
+export function OnBoardScreen({navigation, userInfo}){
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <StatusBar translucent backgroundColor={COLORS.tranparent} />
@@ -18,6 +18,7 @@ export function OnBoardScreen({navigation}){
         source={require('../../assets/imgs/banner.jpg')}
         style={style.image}
       />
+      <Text style={style.welcomeText}> Hello {userInfo.user.givenName},</Text>
       <View style={style.indicatorContainer}>
         <View style={style.indicator} />
         <View style={style.indicator} />
@@ -30,10 +31,9 @@ export function OnBoardScreen({navigation}){
         </View>
 
         <View style={{marginTop: 10}}>
-          <Text style={style.textStyle}>
-            Relive your airport experience with 
-          </Text>
-          <Text style={style.textStyle}>the all new BLR Mobile App</Text>
+          <Text style={style.textStyle}>Upgrade your airport experience with</Text>
+          <Text style={style.textStyle}>the all new Namma Airport Mobile app</Text>
+          <Text style={style.textStyle}>featuring AI and recommendation system</Text>
         </View>
       </View>
 
@@ -43,9 +43,9 @@ export function OnBoardScreen({navigation}){
           justifyContent: 'flex-end',
           paddingBottom: 40,
         }}>
-        <Pressable onPress={() => navigation.navigation.navigate('Detail', house)}>
+        <Pressable onPress={() => navigation.navigate('TabScreens', { screen: 'Home' })}>
           <View style={style.btn}>
-            <Text style={{color: 'white', fontSize: 18}}>Get Started</Text>
+            <Text style={{color: 'white', fontSize: 20}}>Get Started</Text>
           </View>
         </Pressable>
       </View>
@@ -58,6 +58,14 @@ const style = StyleSheet.create({
     height: 420,
     width: '100%',
     borderBottomLeftRadius: 100,
+  },
+  welcomeText: {
+    fontSize: 33,
+    fontStyle: 'italic',
+    position: 'absolute',
+    marginTop: 40,
+    marginLeft: 15,
+    fontWeight: '700'
   },
   indicatorContainer: {
     height: 20,

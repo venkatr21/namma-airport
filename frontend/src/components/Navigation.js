@@ -60,15 +60,20 @@ function DisplayTabs({props, navigation}) {
                 <FontAwesomeIcon icon={ focused?Theme.menuActiveIcon:Theme.menuInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}>
-          {(navigation) => <OnBoardScreen navigation={navigation} userInfo = {props.userInfo}/>}
+          {(navigation) => <HomeScreen navigation={navigation} userInfo = {props.userInfo}/>}
         </Tab.Screen>
       </Tab.Navigator>
   );
 }
 export default function Navigation(props) {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="TabScreens" options={{headerShown: false}}>
+    <Stack.Navigator
+    initialRouteName="GetStarted"
+    screenOptions={{headerShown: false}}>
+      <Stack.Screen name="GetStarted" >
+        {(navigation) => <OnBoardScreen navigation={navigation.navigation} userInfo={props.userInfo}/>}
+      </Stack.Screen>
+      <Stack.Screen name="TabScreens">
         {(navigation) => <DisplayTabs navigation={navigation} props={props}/>}
       </Stack.Screen>
       <Stack.Screen name="Detail" component={DetailScreen} />
