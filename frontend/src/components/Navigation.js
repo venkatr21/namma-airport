@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {HomeScreen, MapScreen, ChatScreen} from '../screens';
+import {HomeScreen, MapScreen, ChatScreen, OnBoardScreen} from '../screens';
 import Theme from '../constants/Theme';
 const Tab = createMaterialBottomTabNavigator();
 
@@ -59,7 +59,7 @@ export default function Navigation(props) {
               <FontAwesomeIcon icon={ focused?Theme.menuActiveIcon:Theme.menuInactiveIcon} size={Theme.navigationIconSize} color={color} />
             ),
         }}>
-        {() => <HomeScreen userInfo = {props.userInfo}/>}
+        {(navigation) => <OnBoardScreen navigation={navigation} userInfo = {props.userInfo}/>}
       </Tab.Screen>
     </Tab.Navigator>
   );
