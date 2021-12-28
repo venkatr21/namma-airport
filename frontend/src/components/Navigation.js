@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {HomeScreen, MapScreen, ChatScreen, OnBoardScreen, DetailScreen} from '../screens';
+import {HomeScreen, MapScreen, ChatScreen, OnBoardScreen, DetailScreen, MenuScreen} from '../screens';
 import Theme from '../constants/Theme';
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -60,7 +60,7 @@ function DisplayTabs({props, navigation}) {
                 <FontAwesomeIcon icon={ focused?Theme.menuActiveIcon:Theme.menuInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}>
-          {(navigation) => <HomeScreen navigation={navigation} userInfo = {props.userInfo}/>}
+          {(navigation) => <MenuScreen navigation={navigation.navigation} userInfo = {props.userInfo}/>}
         </Tab.Screen>
       </Tab.Navigator>
   );

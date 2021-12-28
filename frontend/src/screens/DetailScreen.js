@@ -8,13 +8,17 @@ import {
   FlatList,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../constants/Colors';
+
+import {AZURE_STORAGE_BLOB_CONTAINER, NAMMA_AIRPORT_SERVER} from '@env';
 import Dim from '../constants/Dimensions'
 const width = Dim.ScreenWidth;
-
+import sampleImages from '../constants/sampleImages'
+import Theme from '../constants/Theme';
 
 export function DetailScreen({navigation, route}){
   const house = route.params;
@@ -29,12 +33,13 @@ export function DetailScreen({navigation, route}){
         {/* House image */}
 
         <View style={style.backgroundImageContainer}>
-          <ImageBackground style={style.backgroundImage} source={house.image}>
+          <ImageBackground style={style.backgroundImage} source={{uri: AZURE_STORAGE_BLOB_CONTAINER+house.image}}>
             <View style={style.header}>
               <View style={style.headerBtn}>
                 <Icon
                   name="arrow-back-ios"
-                  size={20}
+                  size={25}
+                  color={'black'}
                   onPress={navigation.goBack}
                 />
               </View>
@@ -45,74 +50,58 @@ export function DetailScreen({navigation, route}){
           </ImageBackground>
 
           {/* Virtual Tag View */}
-          <View style={style.virtualTag}>
+          <TouchableOpacity style={style.virtualTag}>
             <Text style={{color: COLORS.white}}>Virtual tour</Text>
-          </View>
+          </TouchableOpacity>
         </View>
 
         <View style={style.detailsContainer}>
-          {/* Name and rating view container */}
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Text style={{fontSize: 20, fontWeight: 'bold'}}>
-              {house.title}
+            <Text style={{fontSize: 21, fontWeight: 'bold', color:'black'}}>{house.name}
             </Text>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <View style={style.ratingTag}>
                 <Text style={{color: COLORS.white}}>4.8</Text>
               </View>
-              <Text style={{fontSize: 13, marginLeft: 5}}>155 ratings</Text>
+              <Text style={{fontSize: 13, marginLeft: 5, color: 'black'}}>155 ratings</Text>
             </View>
           </View>
 
-          {/* Location text */}
           <Text style={{fontSize: 16, color: COLORS.grey}}>
             {house.location}
           </Text>
 
-          {/* Facilities container */}
           <View style={{flexDirection: 'row', marginTop: 20}}>
             <View style={style.facility}>
-              <Icon name="hotel" size={18} />
-              <Text style={style.facilityText}>2</Text>
+              <Icon name="phone" size={18} color={'black'}/>
+              <Text style={style.facilityText}>{house.phoneNumbers[0]}</Text>
             </View>
             <View style={style.facility}>
-              <Icon name="bathtub" size={18} />
-              <Text style={style.facilityText}>2</Text>
-            </View>
-            <View style={style.facility}>
-              <Icon name="aspect-ratio" size={18} />
-              <Text style={style.facilityText}>100m area</Text>
+              <Icon name="payments" size={18} color={'black'} />
+              <Text style={style.facilityText}>Rs 300 for 2</Text>
             </View>
           </View>
-          <Text style={{marginTop: 20, color: COLORS.grey}}>
-            {house.details}
+          <Text style={{marginTop: 20, color: COLORS.grey, textAlign: 'justify'}}>
+            {house.description}
           </Text>
-
-          {/* Interior list */}
           <FlatList
             contentContainerStyle={{marginTop: 20}}
             horizontal
             showsHorizontalScrollIndicator={false}
             keyExtractor={(_, key) => key.toString()}
-            data={house.interiors}
+            data={sampleImages}
             renderItem={({item}) => <InteriorCard interior={item} />}
           />
-
-          {/* footer container */}
           <View style={style.footer}>
             <View>
               <Text
                 style={{color: COLORS.blue, fontWeight: 'bold', fontSize: 18}}>
-                $1,500
-              </Text>
-              <Text
-                style={{fontSize: 12, color: COLORS.grey, fontWeight: 'bold'}}>
-                Total Price
+                VIEW MENU
               </Text>
             </View>
-            <View style={style.bookNowBtn}>
-              <Text style={{color: COLORS.white}}>Book Now</Text>
-            </View>
+            <TouchableOpacity style={style.bookNowBtn}>
+              <Text style={{color: COLORS.white}}>Order Now</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -143,7 +132,7 @@ const style = StyleSheet.create({
   headerBtn: {
     height: 50,
     width: 50,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.tranparent,
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -192,5 +181,5 @@ const style = StyleSheet.create({
   },
   detailsContainer: {flex: 1, paddingHorizontal: 20, marginTop: 40},
   facility: {flexDirection: 'row', marginRight: 15},
-  facilityText: {marginLeft: 5, color: COLORS.grey},
+  facilityText: {marginLeft: 5, color: Theme.mainColour},
 });
