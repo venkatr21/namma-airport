@@ -65,4 +65,5 @@ buck-out/
 .env
 
 backend/config
+*/model/*
 

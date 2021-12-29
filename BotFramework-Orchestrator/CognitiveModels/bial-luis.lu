@@ -1,0 +1,401 @@
+
+> LUIS application information
+> !# @app.name = bial-luis
+> !# @app.desc = Conversational AI for airport app
+> !# @app.versionId = 0.1
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 7.0.0
+> !# @app.tokenizerVersion = 1.0.0
+
+
+> # Intent definitions
+
+# BookTickets
+- {@BookTickets.TicketQuantity=4} tickets to {@BookTickets.Destination=boston} {@BookTickets.TravelDate=today} with {@BookTickets.OtherSpecifics=window seats}
+- {@BookTickets.TicketQuantity=4} tickets to {@BookTickets.Destination=kashmir}
+- all flights on {@BookTickets.TravelDate=4th november 2022}
+- all flights {@BookTickets.TravelDate=tomorrow}
+- book flight tickets
+- book flights to {@BookTickets.Destination=boston} {@BookTickets.TravelDate=next week}
+- book tickets
+- book tickets on {@BookTickets.TravelDate=20th may 2021} to {@BookTickets.Destination=london} for {@BookTickets.TicketQuantity=3} people
+- book tickets on {@BookTickets.TravelDate=4th july} to {@BookTickets.Destination=chennai}
+- enquire about flights
+- flight {@BookTickets.TravelDate=tomorrow} from {@BookTickets.Source=washington} for {@BookTickets.TicketQuantity=2} people
+- flights from {@BookTickets.Source=austin} on {@BookTickets.TravelDate=4th dec 2021}
+- flights from {@BookTickets.Source=delhi}
+- flights from {@BookTickets.Source=dubai}
+- flights from {@BookTickets.Source=dubai} {@BookTickets.TravelDate=next month}
+- flights from {@BookTickets.Source=london} {@BookTickets.TravelDate=next week}
+- flights {@BookTickets.TravelDate=next week} to {@BookTickets.Destination=north carolina} with {@BookTickets.OtherSpecifics=food}
+- flights on {@BookTickets.TravelDate=16 feb} for {@BookTickets.TicketQuantity=4} people
+- flights on {@BookTickets.TravelDate=18 dec 2020} to {@BookTickets.Destination=london}
+- flights to {@BookTickets.Destination=capetown} {@BookTickets.TravelDate=next week} with {@BookTickets.OtherSpecifics=food}
+- flights to {@BookTickets.Destination=delhi} for {@BookTickets.TicketQuantity=6} people
+- flights to {@BookTickets.Destination=delhi} on {@BookTickets.TravelDate=june}
+- flights to {@BookTickets.Destination=london} {@BookTickets.TravelDate=next week}
+- flights to {@BookTickets.Destination=mumbai} in the {@BookTickets.TravelDate=next month} with {@BookTickets.OtherSpecifics=food}
+- flights {@BookTickets.TravelDate=tomorrow} from {@BookTickets.Source=new york} for {@BookTickets.TicketQuantity=6} people
+- list all flights {@BookTickets.TravelDate=today}
+- list {@BookTickets.OtherSpecifics=indigo} flights from {@BookTickets.Source=dubai} for {@BookTickets.TicketQuantity=3} people
+- list {@BookTickets.OtherSpecifics=spicejet} flights on {@BookTickets.TravelDate=9th dec} to {@BookTickets.Destination=mumbai}
+- need help to travel
+- please list all flights from {@BookTickets.Source=singapore} on {@BookTickets.TravelDate=3rd jan}
+- {@BookTickets.OtherSpecifics=spicejet} flights to {@BookTickets.Destination=chennai} {@BookTickets.TravelDate=next month}
+- travel from {@BookTickets.Source=austin} {@BookTickets.TravelDate=tomorrow}
+- view flights
+
+
+# None
+- 8:00 's reservation at laurelwood pub and brewery needs to be for six people instead of ten
+- 8pm rather than 8:15pm at chez bruce
+- abort a table for 4 at chez billy sud at six tonight
+- add location to favorites
+- add to six people for reservation at per se
+- alice reataurant dinner is off, cancel it
+- amend reservation at marc forgione to include 5 people for my meal 6:00 p.m. at 7:00 p.m.
+- amend that three person reservation at aquagrill from 7:00 to 7:30 pm
+- are you able to change the reservation at st. francis winery & vineyards to five people
+- book a reservation at noon with 4 people in sushi bar
+- book a table at sushi of gari on 79th ave
+- book a table for 6 at long beach seafood restaurant in seattle
+- book me a table at australia dairy company that is good for groups
+- book me a table at the lartusi
+- call and cancel my reservation at gourmet burger kitchen for three tonight at ten to nine
+- call and check on my reservation for six at pommes frites restaurant
+- call cathy's restaurant to update the people to 5
+- call metropolitan museum of art roof garden and make a reservation
+- call st. john to make reservations
+- can i change my reservation at fairwood tomorrow
+- can i change my reservation tonight at fairwood to 6 people instead of five
+- can you tell me the time of the party in nanjing restaurant
+- cancel 7 o'clock 's reservation at l'entrecôte
+- cancel 7:00 p. m. asiate restaurant reservation for tomorrow's dinner
+- cancel a table for eight at peter luger steak house at 7:30 tonight in palo alto
+- cancel breakfast at bridge cafe 's
+- cancel dicos reservation make it to kfc
+- cancel it, make it for four guests at zucca
+- cancel kfc and make for seafood&fruit restaurant&bar reservationat the same time
+- cancel kfc reservation make it to dicos
+- cancel kfc's supper
+- cancel my reservation for six at kfc at seven thirty
+- cancel starbucks make it 3w cafe
+- cancel the reservation at aubergine immediately
+- cancel the reservation for candle cafe
+- cancel the reservation for eight at wong's king 's restaurant at twenty-five to eleven p.m
+- cancel the sylvia's restaurant of harlem reservation for tonight
+- cancel the table at 5pm in dicos's restaurant
+- cancel zucca, make for sushi restaurant same time, 4 guests
+- cancel zucca, make it the red lobster
+- change 3w cafe reservation to 5 people
+- change 7:30 pm 's reservation for wong kei from four people to eight
+- change dirt candy reservation to 8pm instead of 7pm
+- change in dining reservation to le gavroche for brunch
+- change kfc reservation to 3pm
+- change my 2 person table at seven tonight to bar cotto
+- change my 7pm veraci pizza reservation to 8pm
+- change place to market restaurant and bar now
+- change reservation at zucca a table for 5 to five twenty
+- change reservation to bloom's restaurant fourteen past five
+- change restaurant to the peak lookout
+- change restaurants on the salumeria rosi parmacotto reservation to sane lam moon
+- change supper to 4 people at le vallauris
+- change table at peter luger steak house tonight to 4 people on one table
+- change that 5 person reservation from yo! sushi to the woodsman tavern
+- change that reservation to the chicago pizza pie factory to 4 people
+- change the chef's table at brooklyn fare reservation from 7pm to 8pm next thursday
+- change the location to true food kitchen for my twenty past three reservation
+- change the number of people to 4 for the reservation at dirt candy
+- change the one table reservation for tonight's dinner to five people at king's carriage house
+- change the place to another restaurant called blue hill
+- change the reservation at gourmet burger kitchen from 7 people to eight people
+- change the supper time at grodzinski bakery
+- change the time of the reservation at second avenue deli tonight to 7:00 from 6:25
+- change the twenty-five to nine dinner reservation to lindy's
+- change time of dinner peter luger steak house a quarter past six
+- change to 5 person table at noon today at lartusi
+- change to table of 6 tonight half past five at bitterroot
+- change tonight 's brunch reservation to la trompette
+- check and see if my reservation at sylvia's restaurant of harlem is for 7 tonight
+- check if booking at kau kee restaurant 's, 7pm tonight was successfully done.
+- check on the 7 reservation for brasserie vacherin, sutton
+- check reservation time for brasserie julien tomorrow
+- check reservation time for hawker centre
+- check to see if my reservation for 7 tonight is a kennedy fried chicken
+- confirm the reservation at sushi bar in wuxi
+- confirm the reservation with happy bar
+- confirm today 5pm reservation at dayu hot pot
+- contact kennedy fried chicken and increase the number of my party to seven
+- contact stoneburner and let them know i need the space for 6 people instead of 5
+- delay reservation at jahn's to 7 o'clock
+- delete 7:00 p.m. reservation tonight at townsend 's
+- delete kedai makan lunch reservation now
+- delete my reservation for ten at shiro’s
+- delete that sane lam moon reservation for 5 that was six ten
+- delete the cranks reservation.
+- delete the plans for ba bar at seven
+- delete the reservation for the japan house.bar tonight
+- delete the table for two at tsui wah restaurant at a quarter to nine tonight
+- did i make a reservation at veniero's at five forty
+- did the candle cafe reservation at 7:00 p.m. tonight go through
+- did you a table at le gavroche at seven p. m. tonight
+- did you book my table at rolfe's chop house 6:00 p.m.
+- did you make a seven p. m. reservation at munson diner
+- did you make my arethusa al tavolo reservation eight o'clock
+- dinner at café boulud postpone til 8
+- discover market restaurant and bar reservation for 7:00 p.m. tonight
+- display details of my reservation for sushi bar
+- display map for sacramento plastic surgery
+- display the time details of the reservation for sage thai resturant in china town
+- distance between my home to tesco
+- do confirm if we have a booking at 7pm tonight in l'auberge chez francois
+- do find if we have a reservation at 7pm tonight in market restaurant and bar
+- do i have a 7pm reservation at wapping hydraulic power station tonight
+- do i have a reservation at salumeria rosi parmacotto tonight
+- do i have a serendipity 3 dinner tonight
+- do i have a table at sushi yasuda at seven p. m.
+- do i have a table reserved at jumbo kingdom this evening
+- do i have a table tomorrow morning at piccolo cafe for breakfast
+- do i have time to cancel the reservation at le vallauris for tonight
+- do me a favor and ink that reservation for 4 at the nosh bar
+- don't book this paseo reservation, sorry
+- drop 7:00 p.m. reservation at ruth's chris steak house 's
+- eat at veniero's instead of serendipity 3 on friday for my eight person reservation.
+- edit my dinner reservation to 2 people on chirstmas eve at tribeca grill
+- edit reservation for chez billy sud to three people
+- eight o'clock rather than 7 for cranks lunch
+- email me the time of the reservations to vetri cucina in palo alto
+- end reservation request at lombardi's pizza 7 o'clock at piccadilly
+- finalize the reservation for tonight for ten people at harold black
+- find 7:00 p.m. reservation for korilla bbq 's tonight
+- find caravaggio reservation
+- find dorrian's red hand restaurant dining reservation
+- find my reservation at renaissance san diego
+- find my reservation for 7pm at el gaucho
+- find my reservation i made for 1770 house tonight at 7
+- find the reservation at kfc for me
+- find wing wah 's reservation for tonight at 7:00 p.m.
+- get all my reservation pulled up and change the time for my 7 person party at yung kee.
+- get that sane lam moon reservation on the books.
+- go ahead and complete the reservation for tonight at 7 for two people at grodzinski bakery
+- go ahead and confirm the booking of my table for ten tonight at st. john
+- go ahead and make the reservation for 9 o'clock at 54 below as completed please.
+- go to my dinner reservation and change the locale to fairwood
+- have my revervation for kfc brought forth
+- have the manager at masa remove the reservation set for 7:00pm
+- have the reservation of zucca removed
+- help me find my reservation for l'entrecôte
+- help me find my toscana reservation
+- help me find the reservation at aquagrill
+- help me with the time for the reservation at halls chophouse
+- help me with the time of the reservation at beacon hill
+- hold off on finalizing the 7 o'clock the woodsman tavern table for eight
+- how can i change the nice restaurant on the seven people reservation to the woodsman tavern restaurant
+- how far am i from fifty first avenue and indian school
+- how far away from school am i
+- how far i am from my work place
+- how far is it from here to home
+- how far is it from here to work
+- how far is it from home to new haven missouri
+- how far is it to from here
+- how far is it to mum and dad s house
+- how far is it to street
+- how far is mcdonalds from my home
+- how far is rite aid from acme
+- how far is the home depot from lowe s
+- how to change the shiro’s reservation to zuma
+- i don't need a table at kuo yuan
+- i don't think this will work for me so stop the two person el gaucho table.
+- i don’t have time so forget about the kfc reservation
+- i for sure want to eat at true food kitchen on 78th street so go ahead and confirm.
+- i have some changes make to my 11:20 peter luger steak house reservation.
+- i have to cancel my reservation at the chicago pizza pie factory for tonight
+- i have to delay the reservation of dicos in 300 112th ave se
+- i hope you can reserve a restaurant at collage street
+- i hope you can tell me the time of the reservation in the shanghai restaurant
+- i made a reservation for 5 at chef's table at brooklyn fare and now cancel it.
+- i need 7 o'clock 's reservation to be changed to charles' southern style kitchen
+- i need a reservation for star seafood floating restaurant
+- i need a table for seven at tom aikens in shanghai
+- i need reservations at zucca
+- i need the 4-star restaurant changed to yauatcha instead of chef's table at brooklyn fare for that reservation
+- i need the place changed to louisxv reataurant now
+- i need the time for the reservation at the nosh bar
+- i need the time of the mak's noodle reservation changed to 7:30
+- i need to reserve the restaurant named guangzhou restaurant
+- i need you to tell me the time of reservation at zhangliang reataurant
+- i will call delicious rilla later if book this reservation
+- i will go to the shanghai restaurant this afternoon to confirm the reservation
+- i will not take part in the parting this afternoon in jucie's restaurant because i have no time
+- i will now have a dining party of ten people so make the changes to my gabriel kreuther reservation.
+- i would like 6:30 's reservation to be at marc forgione now instead of jack’s place
+- i would like reservations at koi in central street
+- i'd like to know if i reserved a table for valentine's at crystal jade
+- i'd like to make my reservation for tonight for sardi's instead of rolfe's chop house change it for me?
+- i'd like you to go ahead and make this reservation for rich table on richard road tonight yes.
+- i've got to cancel my table for tonight at the popular restaurant nandos
+- if i have a reservation at cipriani s.a. for 7 tonight
+- if you can change my reservation for four at the peak lookout tonight to ray's candy store instead?
+- increase the number of people on my salumeria rosi parmacotto reservation to four
+- is it possible to contact h&h bagels for a possible reservation modification for lunch
+- is the reservation at bitterroot completed
+- is the reservation for 7:00 at gourmet burger kitchen done
+- just don't worry about booking the a quarter to nine p.m. reservation at ba bar for now.
+- keep the same day on my gourmet burger kitchen reservation but postpone it.
+- kfc lunch is off, cancel it
+- kill the zuma reservation tomorrow at nine o'clock p.m.
+- kindly cancel the table reserved for 7 at gaddi's at seven tonight
+- kindly check if we have a booking at ten to nine tonight in aberdeen angus steak houses
+- kindly confirm if we already have done a reservation at sushi house unico fifteen to seven tonight
+- kindly see if we have a table reserved at rainbow room 9:30 p.m. tonight
+- know if already have a reservation at bridge cafe at 8 tonight
+- know if we have a reservation at 7pm tonight at fairwood
+- let me know if i had a time at munson diner tonight
+- let me see the info for that reservation that i placed at l'auberge chez francois
+- let zucca knows that change my reservation from 3:15 to 3:30 p.m. on thursday
+- let's confirm my eight person reservation for the halal guys
+- let's just stop this whole process and close out the reservation for eight at 1770 house
+- let's rate microsoft visitor center 5 stars on google map
+- make a reservation at the closest the original soup man
+- make a reservation for 7 at china grill management
+- make a reservation for four people three forty-five at mo gridder's
+- make a reservation for lawry's
+- make a reservation for me at star seafood floating restaurant
+- make a reservation for two at nine thirty p m at gaddi's
+- make dinner at zucca for 8, not 7 people
+- make for seafood&fruit restaurant&bar reservation
+- make me a reservation at korilla bbq
+- make reservation at corton for next month
+- make reservation at gourmet burger kitchen for dinner 9 o'clock
+- make reservation at st. john for breakfast
+- make reservation at the cube, the 5-star restaurant
+- make reservations at mak's noodle on manamunda
+- make reservations at rainbow room in rowes bay queensland
+- make reservations at the la grenouille
+- make reservations for 6 on fri at ten to five at harold black
+- make reservations for crystal jade in 18th avenue ne
+- make reservations for two at genki sushi
+- make reservations to benihana
+- make reservations to jack’s place for supper
+- make sure my lunch reservation for stars bbq is booked
+- make the reservation at collage street
+- make the reservation at victorian restaurant for 5 instead of 7
+- make the reservation tonight for dirt candy instead of chi spacca
+- nine to dine at rolfe's chop house not wong kei 7pm
+- note change to aberdeen angus steak houses for lunch not the peak lookout
+- now we will be going to sofra note change in place
+- out if we have a table reserved at corton restaurant, 7:00 p.m tonight
+- postone till 8 breakfast at ruth's chris steak house
+- postpone le gavroche reservation to 9 o'clock for tonight
+- postpone the 3-star restaurant zucca reservation by one hour to twelve thirty
+- postpone the jungsik's to 8
+- postpone the maison novelli reservation to half past seven
+- provide me the time of the reservation at chef's table at brooklyn fare
+- pull up reservation for candlenut kitchen
+- push back the dorrian's red hand restaurant reservation to six for tonight
+- put off the reservation in starbucks on the first avenue
+- quash a table for 6 at marc forgione at half past six pm tonight
+- quash ippudo for table of three at 7 o'clock tonight
+- quickly cancel the reservation that we've made at kyiv restaurant at 7:30 pm tonight
+- read to me the time of the reservations to l'auberge chez francois
+- redo the charleston reservation for tonight so there are five people
+- remove my fraunces tavern plans for three
+- remove the reservation at kyiv restaurant half past six
+- remove veniero's restaurant reservation
+- reschedule my reservation for tomorrow at joy ranch bbq
+- rescind a table for two at zuma tonight at a quarter past nine p.m.
+- rescind grodzinski bakery reservation for a table of 7 tonight at seven o'clock
+- rescind reservations for a table of 4 at le bernardin at a quarter to nine tonight
+- reservation at 54 below at twenty past nine tonight for 2 people
+- reservation time for sage thai
+- reservations for 7:00 p.m. at zuma
+- reserve a seat for four people at albannach
+- reserve a spot at marc forgione
+- reserve a table at arethusa al tavolo at half past five p m
+- reserve a table at australia dairy company
+- reserve a table for 5 at zaro's bakery at ten to seven tonight
+- reserve bickford's supper
+- reserve me a place at the chicago pizza pie factory
+- reserve me a table at grodzinski bakery
+- reserve table for five at kedai makan
+- reserve the supper by hard rock cafe on 4 p.m.
+- reserve us a table for 6 at wong's king at eight o'clock
+- retrieve reservations for chi spacca 's 6:30 at 7:00 p.m.
+- save my location on map
+- save my location to my map
+- see if i have a table booked for 6:30 p.m. at 7 at club gascon
+- send an email cancelling my reservation for 4 at amber 's today at half past seven pm
+- show my jack’s place reservation for 7
+- show reservation time for genki sushi
+- show sushi yasuda reservation
+- show the marea reservation for seven
+- show time of true food kitchen reservation
+- switch my tonight 's reservation to kyiv restaurant from luk yu
+- take away the reservation for kennedy fried chicken at seven
+- the address i want the address
+- the reservation for tonight at the woodsman tavern at no.300 112th ave se needs to completed, yes.
+- the reservation for veraci pizza is no longer need. delete it.
+- the star seafood floating restaurant reservation for a quarter to eight
+- the table for tonight at amber needs to be confirmed.
+- the time of my reservation market restaurant and bar
+- the time of reservation tomorrow at bloom's restaurant
+- the time of the reservation at asiate
+- the time of the reservations to le bernardin
+- time of murray's sturgeon shop reservation
+- was there an reservation for kai mayfair at ten past six p.m.
+- we are changing the place to dine to l'entrecôte
+- we need to call barclay prime to see if they can push back my reservation one hour
+- we need to get ahold of kfc to switch that reservation time
+- we need to get ahold of weiya restaurant to switch that reservation time
+- we now have seven more people to add to dinner at the halal guys
+- we want dining in kfc not dicos
+- what is the address for my bus stop
+- what is the distance between my current location and
+- what is the time of my reservation at jean georges, the french cuisine restaurant
+- what is the time of the reservation at albannach
+- what time is dinner at zuma 's?
+- what time is reservation for kuo yuan, the noodle restaurant
+- when is the reservation at hi bar
+- when should we go to zucca where i reserved a table for four
+- where is my home address
+- will i be eating at korilla bbq at seven p. m.
+- wipe out 8:00 p.m 's reservation at hawker centre
+- would you change the metropolitan museum of art roof garden reservation to 8:00 tonight
+- would you change the reservation for tomorrow to patsy's
+- would you mind deleting the reservation for bar italia a quarter past seven
+- yank my table reservation for 3 at second avenue deli
+- yes, i would like for you to make this reservation for me for 7:30 at 7 for 6 at townsend
+- you can cancel fenglin-joy dinner
+- you can mark this reservation as a yes for tribeca grill tonight
+
+
+> # Entity definitions
+
+@ ml BookTickets.Destination
+
+@ ml BookTickets.OtherSpecifics
+
+@ ml BookTickets.Source
+
+@ ml BookTickets.TicketQuantity
+
+@ ml BookTickets.TravelDate
+
+@ ml BookTickets.TravelDate.Day
+
+@ ml BookTickets.TravelDate.Month
+
+@ ml BookTickets.TravelDate.Year
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+> # RegEx entities
+
+

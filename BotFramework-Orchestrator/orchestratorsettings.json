@@ -1,0 +1,9 @@
+{
+  "modelPath": "D:\\Projects\\NammaAirport\\BotFramework-Orchestrator\\model",
+  "snapshotPath": "D:\\Projects\\NammaAirport\\BotFramework-Orchestrator\\generated\\orchestrator.blu",
+  "dataSources": {
+    "hierarchical": false,
+    "inputs": [],
+    "path": ""
+  }
+}
