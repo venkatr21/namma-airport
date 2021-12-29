@@ -66,10 +66,10 @@ class DispatchBot extends ActivityHandler {
 
     async dispatchToTopIntentAsync(context, intent, recognizerResult) {
         switch (intent) {
-        case 'Flight':
+        case 'bial-luis':
             await this.processFlight(context);
             break;
-        case 'QnAMaker':
+        case 'QnAs':
             await this.processSampleQnA(context);
             break;
         default:
@@ -84,8 +84,8 @@ class DispatchBot extends ActivityHandler {
         const luisResult = await this.flightLuisRecognizer.recognize(context);
         // Top intent tell us which cognitive service to use.
         const topIntent = LuisRecognizer.topIntent(luisResult);
-
-        await context.sendActivity(`Flight top intent ${ topIntent }.`);
+        const st = JSON.stringify(luisResult)
+        await context.sendActivity(`Flight top intent ${ st }.`);
     }
 
     async processSampleQnA(context) {
