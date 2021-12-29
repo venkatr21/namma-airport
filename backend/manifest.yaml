@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: namma-airport-backend
+  name: namma-airport-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: namma-airport-backend
+  template:
+    metadata:
+      labels:
+        app: namma-airport-backend
+    spec:
+      containers:
+      - image: CONTAINERREG
+        name: namma-airport-backend
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 5000
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: namma-airport-backend
+  labels:
+    run: namma-airport-backend
+spec:
+  ports:
+  - port: 5000
+    protocol: TCP
+  selector:
+    app: namma-airport-backend
+  type: LoadBalancer
