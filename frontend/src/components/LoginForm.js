@@ -12,7 +12,7 @@ const LoginForm = () => {
                 source={require('../../assets/logo.png')}
                 style={styles.logo}
             />
-            <Text style={styles.text}>Namma Airport</Text>
+            <Text style={styles.text}>Login / Signup</Text>
             <FormInput
                 labelValue={email}
                 onChangeText={(userEmail) => setEmail(userEmail)}
@@ -50,13 +50,13 @@ export default LoginForm;
 
 const styles = StyleSheet.create({
     logo: {
-      height: 150,
-      width: 150,
+      height: 200,
+      width: 267,
       resizeMode: 'cover',
     },
     text: {
       fontFamily: 'Kufam-SemiBoldItalic',
-      fontSize: 28,
+      fontSize: 26,
       marginBottom: 10,
       color: Theme.mainColour,
     },

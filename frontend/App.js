@@ -49,7 +49,7 @@ export default class App extends Component{
     setTimeout(()=>{
       // this.signIn();
       this.setState({isLoaded: true})
-    },1000)
+    },2000)
   }
   render(){
     return(
@@ -57,7 +57,7 @@ export default class App extends Component{
         translucent={true}
         isLoaded={this.state.isLoaded}
         logoImage={require("./assets/splash.png")}
-        backgroundColor={"black"}
+        backgroundColor={"white"}
         logoHeight={Dim.WindowHeight}
         logoWidth={Dim.WindowWidth}
       >
@@ -86,7 +86,7 @@ export default class App extends Component{
 
 const styles = StyleSheet.create({
   GoogleSigninContainer: {
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
     flexGrow: 1,
     width: Dim.WindowWidth,
     justifyContent: 'center',
