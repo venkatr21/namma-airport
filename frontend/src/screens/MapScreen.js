@@ -9,11 +9,24 @@ import SearchBarWithAutocomplete from '../components/SearchBar';
 import {NAMMA_AIRPORT_SERVER} from '@env';
 import PassengerCount from '../components/PassengerCount';
 import axios from 'axios';
+
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 export function MapScreen({navigation, userInfo}) {
     const [mapCoordinates, setMapCoordinates] = useState(MapConstants);
     const [isLoading, setIsLoading] = useState(true);
-    const [search, setSearch] = useState({ term: '' });
-    const [searchResult, setSearchResult] = useState([])
+    const [search, setSearch] = useState({ term: "" });
+    const setSearchTerm = (term)=>{
+      setSearch({term: term});
+      if(term.length>0) setShowClose(true);
+      else setShowClose(false);
+    }
+    const clearSearches = ()=>{
+      setSearchResult([]);
+      setSearchTerm("");
+    }
+    const [searchResult, setSearchResult] = useState([]);
+    const [showClose, setShowClose] = useState(false);
     const onSubmitEditing = ()=>{
       if(search.term.length>0){
         var config = {
@@ -45,7 +58,7 @@ export function MapScreen({navigation, userInfo}) {
         setIsLoading(false);
     });
     return (
-    <View style={styles.container}>
+    <View style={styles(showClose).container}>
         <StatusBar showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
         <TabBar displayText={"Map & Explore"} />
         <View style={{flexGrow: 1}}>
@@ -69,24 +82,42 @@ export function MapScreen({navigation, userInfo}) {
             ))}
           </MapView>
           )}
-          <View style={styles.searchView}>
+          <View style={showClose?styles(showClose).searchViewMin:styles(showClose).searchView}>
             <SearchBarWithAutocomplete
                 value={search.term}
-                onChangeText={(text) => setSearch({ term: text })}
+                onChangeText={(text) => {
+                  setSearchTerm(text);
+                }}
                 onSubmitEditing = {()=> onSubmitEditing()}/>
+                
+          {showClose?(
+            <TouchableOpacity style={styles.searchCloseButton} onPress={()=>{clearSearches()}}>
+              <Icon name="close" size={50} color={Theme.mainColour}/>
+            </TouchableOpacity>
+            ):(null)}
           </View>
-
           <PassengerCount />
         </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = (props) => StyleSheet.create({
     container: {
       flex: 1,
     },
+    searchCloseButton:{
+      backgroundColor: 'white',
+      flexGrow: 1,
+    },
     searchView: {
+      flexDirection: 'row',
+      width: Dim.WindowWidth-20,
+      margin: 10,
+      position: 'absolute'
+    },
+    searchViewMin: {
+      flexDirection: 'row',
       width: Dim.WindowWidth-20,
       margin: 10,
       position: 'absolute'
