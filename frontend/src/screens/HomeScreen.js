@@ -35,7 +35,7 @@ export function HomeScreen({userInfo, navigation}) {
                   <TouchableOpacity style={styles.serviceIcon}>
                     <Icon color={Theme.mainColour} name={'remove-shopping-cart'} size={35} />
                   </TouchableOpacity>
-                  <Text style={styles.serviceTitle}>Hello</Text>
+                  <Text style={styles.serviceTitle}>Dutifree Retail</Text>
                 </View>
                 <View style={styles.serviceViewColumn}>
                   <TouchableOpacity style={styles.serviceIcon}>
@@ -48,9 +48,9 @@ export function HomeScreen({userInfo, navigation}) {
               <View style={styles.serviceViewRow}>
                 <View style={styles.serviceViewColumn}>
                   <TouchableOpacity style={styles.serviceIcon}>
-                    <Icon color={Theme.mainColour} name={'flight'} size={35} />
+                    <Icon color={Theme.mainColour} name={'explore'} size={35} />
                   </TouchableOpacity>
-                  <Text style={styles.serviceTitle}>Hello</Text>
+                  <Text style={styles.serviceTitle}>Explore BLR</Text>
                 </View>
                 <View style={styles.serviceViewColumn}>
                   <TouchableOpacity style={styles.serviceIcon}>
