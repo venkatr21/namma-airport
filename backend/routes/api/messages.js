@@ -25,19 +25,47 @@ function generateBotReplyForAnswer(answer, requestBody){
     return botReply;
 }
 
-function generateLuisReplyForAnswer(answer, requestBody){
-    var botReply = {
-        text: answer,
-        createdAt: new Date().toISOString(),
-        user:{
-            _id: "bot",
-            name: "Namma Airport Bot",
-            avatar: "https://nammaairportstorage.blob.core.windows.net/namma-airport/bot.jpg",
-        },
-        email: requestBody.email,
-        _id: uuid.v4()
+function generateLuisReplyForAnswer(luisResponse, requestBody){
+    var quickReply = ""
+    for (let [key, value] of Object.entries(luisResponse.prediction.entities)) {
+        quickReply+=(key.split(".")[1]+": "+value[0]+"\n");
     };
-    return botReply;
+    if(quickReply.length>0){
+        return {
+            text: "I was able to understand this from your query!",
+            createdAt: new Date().toISOString(),
+            user:{
+                _id: "bot",
+                name: "Namma Airport Bot",
+                avatar: "https://nammaairportstorage.blob.core.windows.net/namma-airport/bot.jpg",
+            },
+            email: requestBody.email,
+            _id: uuid.v4(),
+            quickReplies: {
+                type: 'checkbox',
+                keepIt: true,
+                values: [
+                    {
+                        title: quickReply,
+                        value: quickReply
+                    }
+                ]
+            }
+        }
+    }
+    else{
+        return {
+            text: "Sorry, I was unable to parse your query, can you please refine your search?",
+            createdAt: new Date().toISOString(),
+            user:{
+                _id: "bot",
+                name: "Namma Airport Bot",
+                avatar: "https://nammaairportstorage.blob.core.windows.net/namma-airport/bot.jpg",
+            },
+            email: requestBody.email,
+            _id: uuid.v4()
+        }
+    }
 }
 
 async function fetchBotResponse(question){
@@ -90,12 +118,12 @@ async function orchestrateAnswer(question, requestBody){
     if(luisTopIntent!=="None"){
         const luisScore = luisResponse.prediction.intents[luisTopIntent].score;
         if(luisScore*100>botScore){
-            return "Luis Response"
+            return generateLuisReplyForAnswer(luisResponse, requestBody);
         }else{
-            return "Bot Response"
+            return generateBotReplyForAnswer(botResponse.answers[0].answer, requestBody);
         }
     }else{
-        return "Bot Response"
+        return generateBotReplyForAnswer(botResponse.answers[0].answer, requestBody);
     }
 }
 
@@ -114,7 +142,6 @@ async function fetchAnswer(question, requestBody){
     };
     var response = await axios(config);
     try{
-        console.log(response.data)
         return generateBotReplyForAnswer(response.data.answers[0].answer, requestBody);
     }catch{
         return null;
@@ -149,11 +176,22 @@ router.post('/',async (req,res)=>{
 
 router.post('/test',async (req,res)=>{
     var question = req.body.text;
-    orchestrateAnswer(question)
+    orchestrateAnswer(question, req.body)
     .then(response=>{
-        res.json({"reply from": response});
+        var userMessage = new Message(req.body);
+        var botMessage = new Message(response);
+        // Message.insertMany([userMessage, botMessage])
+        // .then(()=>{  
+        //     res.json(botMessage);
+        // })
+        // .catch((err)=>{
+        //     console.log(err);
+        //     res.sendStatus(400);
+        // })
+        res.json(botMessage);
     })
     .catch(err=>{
+        console.log(err);
         res.sendStatus(400);
     })
     

@@ -12,7 +12,7 @@ const User = new Schema({
 const Reply = new Schema({
     title: { type: String, required: true},
     value: { type: String, required: true},
-    messageId: { type: String, required: true}
+    messageId: { type: String, required: false}
 });
 
 const QuickReplies = new Schema({
