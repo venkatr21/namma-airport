@@ -63,7 +63,7 @@ export default class HomePageCarousel extends Component {
 }
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
+        backgroundColor: '#eee',
         borderRadius: 10,
         width: ITEM_WIDTH,
         marginBottom: 20,

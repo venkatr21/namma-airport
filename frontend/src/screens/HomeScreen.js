@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet, StatusBar, ScrollView, SafeAreaView} from 'react-native';
 import { TabBar } from '../components/TabBar';
+import { KioskView } from '../components/KioskView';
 import HomePageCarousel from '../components/HomePageCarousel';
 export function HomeScreen({userInfo, navigation}) {
   return (
@@ -12,8 +13,9 @@ export function HomeScreen({userInfo, navigation}) {
             <Text style={styles.homepageSectionText}>Your personalized recommendations</Text>
             <HomePageCarousel navigation={navigation.navigation} userInfo={userInfo} />
           </View>
-          <View style={styles.kioskView}>
+          <View style={styles.kioskContainer}>
             <Text style={styles.homepageSectionText}>Self-serve E-Kiosk</Text>
+            <KioskView />
           </View>
         </ScrollView>
     </SafeAreaView >
@@ -33,5 +35,8 @@ const styles = StyleSheet.create({
       marginLeft: 10,
       fontFamily: 'Lato-BoldItalic',
       color: 'black',
-    }
+    },
+    kioskContainer:{
+      marginTop: 10,
+    },
 });
