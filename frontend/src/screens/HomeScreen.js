@@ -1,19 +1,22 @@
 import React from 'react';
-import {Text, View, StyleSheet, StatusBar, KeyboardAvoidingView} from 'react-native';
+import {Text, View, StyleSheet, StatusBar, ScrollView, SafeAreaView} from 'react-native';
 import { TabBar } from '../components/TabBar';
 import HomePageCarousel from '../components/HomePageCarousel';
 export function HomeScreen({userInfo, navigation}) {
   return (
-    <View style={styles.container}>
+    <SafeAreaView  style={styles.container}>
         <StatusBar  showHideTransition='slide' barStyle='default' backgroundColor="#e91e63"/>
         <TabBar displayText={"Home"} />
-        <View style={{flexGrow: 1, alignItems: 'center'}}>
+        <ScrollView style={{flex: 1, flexGrow: 1}}>
           <View style={styles.homepageCarousel}>
-            <Text style={styles.homepageCarouselText}>Your personalized recommendations</Text>
+            <Text style={styles.homepageSectionText}>Your personalized recommendations</Text>
             <HomePageCarousel navigation={navigation.navigation} userInfo={userInfo} />
           </View>
-        </View>
-    </View>
+          <View style={styles.kioskView}>
+            <Text style={styles.homepageSectionText}>Self-serve E-Kiosk</Text>
+          </View>
+        </ScrollView>
+    </SafeAreaView >
   );
 }
 
@@ -23,12 +26,11 @@ const styles = StyleSheet.create({
     },
     homepageCarousel: {
       marginTop: 10,
-      flex: 0.6,
     },
-    homepageCarouselText:{
-      fontSize: 16,
+    homepageSectionText:{
+      fontSize: 18,
       marginBottom: 4,
-      alignSelf: 'center',
+      marginLeft: 10,
       fontFamily: 'Lato-BoldItalic',
       color: 'black',
     }

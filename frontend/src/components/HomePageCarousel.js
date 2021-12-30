@@ -10,7 +10,6 @@ export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.8)
 export default class HomePageCarousel extends Component {
     state = {
         recommendation: [],
-        activeSlide: 0,
         renderRecommendation: false
     }
 
@@ -43,29 +42,6 @@ export default class HomePageCarousel extends Component {
             </TouchableOpacity>
         );
     }
-    get pagination () {
-        const entries = this.state.recommendation;
-        const { activeSlide } = this.state;
-        return (
-            <Pagination
-              containerStyle={{marginTop: 0, flex: 0.01}}
-              dotsLength={entries.length}
-              activeDotIndex={activeSlide}
-              dotStyle={{
-                  width: 10,
-                  height: 10,
-                  borderRadius: 5,
-                  marginHorizontal: 6,
-                  backgroundColor: Theme.mainColour
-              }}
-              inactiveDotStyle={{
-                  backgroundColor: 'grey',
-              }}
-              inactiveDotOpacity={0.4}
-              inactiveDotScale={0.6}
-            />
-        );
-    }
  
     render () {
         return (
@@ -74,15 +50,13 @@ export default class HomePageCarousel extends Component {
                 ref={(c) => { this._carousel = c; }}
                 data={this.state.recommendation}
                 renderItem={this._renderItem}
-                // layout="tinder"
+                layout="stack"
                 layoutCardOffset={8}
                 sliderWidth={SLIDER_WIDTH}
                 itemWidth={ITEM_WIDTH}
                 autoplay={true}
                 loop={true}
-                onSnapToItem={(index) => this.setState({ activeSlide: index }) }
             />
-            { this.pagination }
             </View>
         );
     }
@@ -92,6 +66,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 10,
         width: ITEM_WIDTH,
+        marginBottom: 20,
+        marginTop: 10,
         paddingBottom: 40,
         shadowColor: "#000",
         shadowOffset: {
@@ -101,7 +77,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.29,
         shadowRadius: 4.65,
         elevation: 7,
-        maxHeight: 320
+        maxHeight: 350
       },
       image: {
         width: ITEM_WIDTH,
@@ -119,6 +95,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         paddingLeft: 20,
         paddingTop: 5,
-        paddingRight: 20
+        paddingRight: 20,
       }
 });
