@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react';
-import { View, Text, StyleSheet,StatusBar, KeyboardAvoidingView } from 'react-native';
+import { View, Text, StyleSheet,StatusBar, ToastAndroid } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat';
 import {ChatBot } from '../components/ChatBot';
 import { TabBar } from '../components/TabBar';
@@ -7,6 +7,9 @@ import uuid from 'react-native-uuid';
 import {NAMMA_AIRPORT_SERVER} from '@env';
 import axios from 'axios';
 import { LogBox } from "react-native";
+import Theme from '../constants/Theme';
+
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 
@@ -42,7 +45,7 @@ export function ChatScreen ({ navigation, userInfo }) {
     const onSend = useCallback((messages = []) => {
         var config = {
             method: 'post',
-            url: NAMMA_AIRPORT_SERVER+'messages/',
+            url: NAMMA_AIRPORT_SERVER+'messages/test',
             headers: { 
               'Content-Type': 'application/json'
             },
@@ -74,6 +77,15 @@ export function ChatScreen ({ navigation, userInfo }) {
                 loadEarlier={true}
                 onLoadEarlier={()=>{onLoadEarlier()}}
                 textInputStyle={{  color: 'black' }}
+                onQuickReply={quickReply => {
+                    ToastAndroid.showWithGravity(
+                        JSON.stringify(quickReply[0].title),
+                        ToastAndroid.SHORT,
+                        ToastAndroid.CENTER
+                      );
+                }}
+                scrollToBottomComponent = {()=>{ return <Icon name="arrow-downward" size={30}/>}}
+                scrollToBottomStyle = {{backgroundColor: Theme.mainColour}}
                 user={{
                     _id: 'user',
                     name: userInfo.user.name,

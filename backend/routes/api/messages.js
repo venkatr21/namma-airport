@@ -180,15 +180,13 @@ router.post('/test',async (req,res)=>{
     .then(response=>{
         var userMessage = new Message(req.body);
         var botMessage = new Message(response);
-        // Message.insertMany([userMessage, botMessage])
-        // .then(()=>{  
-        //     res.json(botMessage);
-        // })
-        // .catch((err)=>{
-        //     console.log(err);
-        //     res.sendStatus(400);
-        // })
-        res.json(botMessage);
+        Message.insertMany([userMessage, botMessage])
+        .then(()=>{  
+            res.json(botMessage);
+        })
+        .catch((err)=>{
+            res.sendStatus(400);
+        })
     })
     .catch(err=>{
         console.log(err);
