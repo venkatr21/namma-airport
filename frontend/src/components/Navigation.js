@@ -4,13 +4,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {HomeScreen, MapScreen, ChatScreen, OnBoardScreen, DetailScreen, MenuScreen} from '../screens';
 import Theme from '../constants/Theme';
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 function DisplayTabs({props, navigation}) {
   return (
-    
-    <BottomSheetModalProvider>
       <Tab.Navigator
       initialRouteName="Home"
       activeColor= {Theme.activeBackgroundColor}
@@ -56,9 +53,6 @@ function DisplayTabs({props, navigation}) {
           {() => <ChatScreen userInfo = {props.userInfo}/>}
         </Tab.Screen>
         <Tab.Screen
-          navigationOptions={{
-          }}
-          component={MenuScreen}
           name="Menu"
           options={{
               tabBarLabel: 'Menu',
@@ -66,10 +60,10 @@ function DisplayTabs({props, navigation}) {
                 <FontAwesomeIcon icon={ focused?Theme.menuActiveIcon:Theme.menuInactiveIcon} size={Theme.navigationIconSize} color={color} />
               ),
           }}>
+            {() => <MenuScreen userInfo = {props.userInfo}/>}
         </Tab.Screen>
         
       </Tab.Navigator>
-    </BottomSheetModalProvider>
   );
 }
 export default function Navigation(props) {
