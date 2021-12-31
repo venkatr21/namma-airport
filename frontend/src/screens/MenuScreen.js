@@ -1,11 +1,49 @@
-import React from "react";
-import {Text, View, Button} from 'react-native'
+import React, { useEffect, useCallback, useMemo, useRef } from 'react';
+import { View, Text, StyleSheet, Button } from 'react-native';
+import {
+  BottomSheetModal,
+  BottomSheetModalProvider,
+} from '@gorhom/bottom-sheet';
 
-export function MenuScreen({ navigation }) {
-    return (
-      <View style={{ flex: 0.6, bottom:0, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 30, color:'black' }}>Model Test</Text>
-        <Button onPress={() => navigation.goBack()} title="Dismiss" />
+export function MenuScreen(){
+  const bottomSheetModalRef = useRef(null);
+  const snapPoints = useMemo(() => ['25%', '50%'], []);
+  const handlePresentModalPress = useCallback(() => {
+    bottomSheetModalRef.current?.present();
+  }, []);
+  const handleSheetChanges = useCallback((index) => {
+    console.log('handleSheetChanges', index);
+  }, []);
+
+  return (
+    <View style={styles.container}>
+        <Button
+          onPress={handlePresentModalPress}
+          title="Edit your details"
+          color="black"
+        />
+        <BottomSheetModal
+          ref={bottomSheetModalRef}
+          index={1}
+          snapPoints={snapPoints}
+          onChange={handleSheetChanges}
+        >
+          <View style={styles.contentContainer}>
+          </View>
+        </BottomSheetModal>
       </View>
-    );
-  }
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+    justifyContent: 'center',
+  },
+  contentContainer: {
+    flex: 1,
+    backgroundColor: 'grey',
+    alignItems: 'center',
+  },
+});

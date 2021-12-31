@@ -1,3 +1,5 @@
+
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/components/Navigation';
 import React,{Component} from 'react';
@@ -75,8 +77,9 @@ export default class App extends Component{
                   />
               </View>
             ): (
-              <Navigation userInfo={this.state.userInfo} />
+                <Navigation userInfo={this.state.userInfo} />
             )}
+            
           </NavigationContainer>
         </View>
       </AnimatedSplash>

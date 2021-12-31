@@ -14,6 +14,8 @@ target 'frontend' do
 
   pod 'react-native-config', :path => '../node_modules/react-native-config'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'frontendTests' do
     inherit! :complete
     # Pods for testing
