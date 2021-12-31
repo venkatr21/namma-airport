@@ -4,10 +4,11 @@ import {
   BottomSheetModal,
   BottomSheetModalProvider,
 } from '@gorhom/bottom-sheet';
+import Dim from '../constants/Dimensions';
 
 export function MenuScreen(){
   const bottomSheetModalRef = useRef(null);
-  const snapPoints = useMemo(() => ['25%', '50%'], []);
+  const snapPoints = useMemo(() => ['25%', '50%', '80%'], []);
   const handlePresentModalPress = useCallback(() => {
     bottomSheetModalRef.current?.present();
   }, []);
@@ -27,6 +28,9 @@ export function MenuScreen(){
           index={1}
           snapPoints={snapPoints}
           onChange={handleSheetChanges}
+          animationConfigs={{
+            point: 2,
+          }}
         >
           <View style={styles.contentContainer}>
           </View>
@@ -40,10 +44,10 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
     justifyContent: 'center',
+    backgroundColor: '#ddd',
   },
   contentContainer: {
     flex: 1,
-    backgroundColor: 'grey',
     alignItems: 'center',
   },
 });
