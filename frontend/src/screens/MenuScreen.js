@@ -1,21 +1,24 @@
-import React, { useEffect, useCallback, useMemo, useRef } from 'react';
-import { View,Text, Image, StyleSheet, Button, Touchable } from 'react-native';
+import React, { useState, useCallback, useMemo, useRef } from 'react';
+import { View,Text, Image, StyleSheet, Button, TouchableOpacity, Dimensions } from 'react-native';
+import CheckBox from '@react-native-community/checkbox'
 import {
   BottomSheetModal,
   BottomSheetModalProvider,
 } from '@gorhom/bottom-sheet';
-import Dim from '../constants/Dimensions';
 import Theme from '../constants/Theme';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-
+import Dim from '../constants/Dimensions';
 export function MenuScreen({userInfo}){
+  const [personalizedRec,setPersonalizedRec] = useState(true);
+  const [ticketRec,setTicketRec] = useState(true);
+  const [locationRec,setLocationRec] = useState(true);
+  const [pushNotif,setPushNotif] = useState(true);
+  const [emailNotification,setEmailNotification] = useState(true);
   const bottomSheetModalRef = useRef(null);
   const snapPoints = useMemo(() => ['25%', '50%', '80%'], []);
   const handlePresentModalPress = useCallback(() => {
     bottomSheetModalRef.current?.present();
   }, []);
   const handleSheetChanges = useCallback((index) => {
-    console.log('handleSheetChanges', index);
   }, []);
 
   return (
@@ -38,12 +41,67 @@ export function MenuScreen({userInfo}){
           index={1}
           snapPoints={snapPoints}
           onChange={handleSheetChanges}
-          animationConfigs={{
-            point: 2,
-          }}
         >
           <View style={styles.contentContainer}>
             <Text style={styles.preferencesButtonText}> PREFERENCES LIST</Text>
+            <View style={styles.checkboxContainer}>
+              <View style={styles.checkboxView}>
+                <CheckBox
+                  value={personalizedRec}
+                  onValueChange={setPersonalizedRec}
+                  style={styles.checkbox}
+                />
+                <View style={styles.checkboxTextView}>
+                <Text style={styles.label}>Personalized recommendations</Text>
+                </View>
+              </View>
+
+              <View style={styles.checkboxView}>
+                <CheckBox
+                  value={ticketRec}
+                  onValueChange={setTicketRec}
+                  style={styles.checkbox}
+                />
+                
+                <View style={styles.checkboxTextView}>
+                <Text style={styles.label}>Ticket-based lounge recommendation</Text>
+                </View>
+              </View>
+
+              <View style={styles.checkboxView}>
+                <CheckBox
+                  value={locationRec}
+                  onValueChange={setLocationRec}
+                  style={styles.checkbox}
+                />
+                <View style={styles.checkboxTextView}>
+                <Text style={styles.label}>Location-based transport recommendation</Text>
+                </View>
+              </View>
+
+              <View style={styles.checkboxView}>
+                <CheckBox
+                  value={pushNotif}
+                  onValueChange={setPushNotif}
+                  style={styles.checkbox}
+                />
+                <View style={styles.checkboxTextView}>
+                <Text style={styles.label}>App push notification</Text>
+                </View>
+              </View>
+
+              <View style={styles.checkboxView}>
+                <CheckBox
+                  value={emailNotification}
+                  onValueChange={setEmailNotification}
+                  style={styles.checkbox}
+                />
+                <View style={styles.checkboxTextView}>
+                <Text style={styles.label}>Email notification</Text>
+                </View>
+              </View>
+            </View>
+            
           </View>
         </BottomSheetModal>
       </View>
@@ -95,5 +153,28 @@ const styles = StyleSheet.create({
     fontFamily: 'Lato-Bold',
     fontSize: 17,
     color: Theme.mainColour,
+  },
+  checkboxView: {
+    width: Dim.WindowWidth-40,
+    marginHorizontal: 20,
+    backgroundColor: '#eee',
+    flexDirection: "row",
+    marginTop: 20,
+    borderRadius: 5,
+  },
+  checkboxContainer: {
+    marginBottom: 20,
+  },
+  checkbox: {
+    alignSelf: "center",
+  },
+  label: {
+    fontFamily: 'Lato-Italic',
+    fontSize: 20,
+    color: 'black',
+    margin: 8,
+  },
+  checkboxTextView:{
+    flexShrink: 1,
   }
 });
