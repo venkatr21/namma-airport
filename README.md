@@ -56,7 +56,7 @@
 
 ## About The Project
 
-[![Namma Airport][product-screenshot]](https://example.com)
+[![Namma Airport][product-screenshot]](https://github.com/venkatr21/)
 
 Namma Airport is an initiative to enhance and equip the bangalore international airport mobile application with AI enables features and improve the user experience. Feel free to clone, run and develop further.
 
@@ -236,4 +236,4 @@ Some of the opensourced softwares and packages really gave me a headstart to kic
 [license-url]: https://github.com/venkatr21/namma-airport/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/venkat-ragavan-29952118b/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: namma-airport/blob/master/frontend/assets/logo.png
