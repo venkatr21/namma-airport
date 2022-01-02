@@ -18,8 +18,6 @@
   <p align="center">
     Equipping the Bangalore International Airport application with AI enabled features and enhancing the user experience.
     <br />
-    <a href="https://github.com/venkatr21/namma-airport/blob/master/README.md"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/venkatr21/namma-airport">View Demo</a>
     ·
@@ -50,7 +48,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -63,6 +60,8 @@
 Namma Airport is an initiative to enhance and equip the bangalore international airport mobile application with AI enables features and improve the user experience. Feel free to clone, run and develop further.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- BUILT WITH -->
 
 ### Built With
 
@@ -193,13 +192,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@venkatr21](http://instagram.com/venkatr21) - mail2venkat21@gmail.com
+Venkat Ragavan - [@venkatr21](http://instagram.com/venkatr21) - mail2venkat21@gmail.com
 
-Project Link: [https://github.com/venkatr21/namma-airport](https://github.com/venkatr21/namma-airport)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
+[https://github.com/venkatr21/namma-airport](https://github.com/venkatr21/namma-airport)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
