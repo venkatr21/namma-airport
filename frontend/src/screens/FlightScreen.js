@@ -5,7 +5,8 @@ import {
   ScrollView,
   Text,
   FlatList,
-  SafeAreaView
+  SafeAreaView,
+  ActivityIndicator
 } from 'react-native';
 import { TabBar } from '../components/TabBar';
 import {FLIGHT_RADAR_API} from '@env';
@@ -85,7 +86,7 @@ export function FlightScreen({navigation, route}){
                     keyExtractor={(item,index) => index.toString()}
                 />
                 </SafeAreaView>
-                ):null}
+                ):<ActivityIndicator color={Theme.activityIndicatorColour} size={"large"} />}
             </View>
             <Text style={styles.homepageSectionText}>Departures</Text>
             <View style={styles.subView}>
@@ -97,7 +98,7 @@ export function FlightScreen({navigation, route}){
                     keyExtractor={(item,index) => index.toString()}
                 />
                 </SafeAreaView>
-                ):null}
+                ):<ActivityIndicator color={Theme.activityIndicatorColour} size={"large"} />}
             </View>
         </View>
         </View>
@@ -116,8 +117,9 @@ const styles = StyleSheet.create({
         height: Dim.WindowHeight/2-90,
         backgroundColor: '#eee',
         marginVertical: 10,
-        marginHorizontal: 30,
+        marginHorizontal: 20,
         elevation: 8,
+        justifyContent: 'center',
     },
     flatListView:{
         marginHorizontal: 5,
