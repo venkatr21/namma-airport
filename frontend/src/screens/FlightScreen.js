@@ -124,8 +124,8 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         overflow: 'hidden',
         flex: 1,
-        marginVertical: 10,
-        backgroundColor: '#ccc',
+        marginVertical: 6,
+        backgroundColor: '#ddd',
         
     },
     flatListrow:{
