@@ -48,6 +48,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -93,7 +94,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Setting up the environment and installing the application._
 
 1. Get an Azure Subscription at [Azure Portal](https://azure.microsoft.com/en-in/free/)
 2. Clone the repo
@@ -149,6 +150,7 @@ Namma Airport uses a variety of azure services for Personalized recommendation, 
 7. Azure Cosmos DB
 8. Azure Storage containers
 9. Azure App insights
+10. Azure Translator and Speech SDK
 
 _For tech implementation, please refer to the [Azure Docs](https://docs.microsoft.com/en-us/azure/?product=popular)_
 
@@ -168,6 +170,7 @@ _For tech implementation, please refer to the [Azure Docs](https://docs.microsof
 - [x] Dockerizing the backend
 - [x] Hosting backend on Azure kubernetes
 - [ ] Multi-lingual support
+- [ ] Enhance Accessibility with text to speech
 - [ ] Realtime flight data support
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -201,9 +204,20 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Venkat Ragavan - [@venkatr21](http://instagram.com/venkatr21) - mail2venkat21@gmail.com
+Venkat Ragavan S - [LinkedIn @ Venkat Ragavan S](https://www.linkedin.com/in/venkat-ragavan-29952118b/) - mail2venkat21@gmail.com
 
 [https://github.com/venkatr21/namma-airport](https://github.com/venkatr21/namma-airport)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+Some of the opensourced softwares and packages really gave me a headstart to kick things off!
+
+- [React native gifted chat](https://github.com/FaridSafi/react-native-gifted-chat)
+- [React native material bottom tabs](https://reactnavigation.org/docs/material-bottom-tab-navigator/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
