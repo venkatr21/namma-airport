@@ -55,7 +55,7 @@
 
 ## About The Project
 
-[![Namma Airport Screen Shot][product-screenshot]](https://example.com)
+[![Namma Airport][product-screenshot]](https://example.com)
 
 Namma Airport is an initiative to enhance and equip the bangalore international airport mobile application with AI enables features and improve the user experience. Feel free to clone, run and develop further.
 
@@ -81,7 +81,7 @@ The list of all tech stacks and Services used to develop Namma Airport's initial
 ## Getting Started
 
 This is how you can set up the project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -123,6 +123,15 @@ _Below is an example of how you can instruct your audience on installing and set
     }
    ```
 
+5. Host the backend and run the frontend developement server with the following command
+
+   ```js
+    // run the Metro server
+    npx react-native start
+    // bundle the application and run it on android
+    npx react-native run-android
+   ```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Azure Services Used -->
@@ -157,7 +166,7 @@ _For tech implementation, please refer to the [Azure Docs](https://docs.microsof
 - [x] Chatbot development
 - [x] LUIS and Azure QnA Orchestration
 - [x] Dockerizing the backend
-- [ ] Hosting backend on Azure kubernetes
+- [x] Hosting backend on Azure kubernetes
 - [ ] Multi-lingual support
 - [ ] Realtime flight data support
 
