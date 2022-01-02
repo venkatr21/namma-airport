@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/venkatr21/namma-airport/">
-    <img src="https://github.com/venkatr21/namma-airport/blob/master/frontend/assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/venkatr21/namma-airport/blob/master/frontend/assets/logo.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Namma Airport</h3>
