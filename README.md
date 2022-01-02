@@ -79,7 +79,6 @@ The list of all tech stacks and Services used to develop Namma Airport's initial
 
 ## Getting Started
 
-This is how you can set up the project locally.
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
@@ -111,7 +110,7 @@ _Setting up the environment and installing the application._
    npm install
    ```
 
-4. Enter your AP Keys in `backend/config/default.json` and `frontend/.env` in the following format
+4. Enter your API Keys in `backend/config/default.json` and `frontend/.env` in the following format
 
    ```js
     //.env file
