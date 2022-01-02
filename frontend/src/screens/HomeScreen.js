@@ -26,7 +26,7 @@ export function HomeScreen({userInfo, navigation}) {
             <View style={styles.homeScreenServices}>
               <View style={styles.serviceViewRow}>
                 <View style={styles.serviceViewColumn}>
-                  <TouchableOpacity style={styles.serviceIcon}>
+                  <TouchableOpacity style={styles.serviceIcon} onPress={()=>{navigation.navigation.navigate('Flights')}}>
                     <Icon color={Theme.mainColour} name={'flight'} size={35} />
                   </TouchableOpacity>
                   <Text style={styles.serviceTitle}>Boarding</Text>

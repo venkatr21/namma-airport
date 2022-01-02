@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {HomeScreen, MapScreen, ChatScreen, OnBoardScreen, DetailScreen, MenuScreen} from '../screens';
 import Theme from '../constants/Theme';
+import { FlightScreen } from '../screens/FlightScreen';
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 function DisplayTabs({props, navigation}) {
@@ -78,6 +79,7 @@ export default function Navigation(props) {
         {(navigation) => <DisplayTabs navigation={navigation} props={props}/>}
       </Stack.Screen>
       <Stack.Screen name="Detail" component={DetailScreen} />
+      <Stack.Screen name="Flights" component={FlightScreen} />
     </Stack.Navigator>
   );
 }
