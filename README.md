@@ -9,8 +9,8 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/venkatr21/">
-    <img src="namma-airport/blob/master/frontend/assets/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/venkatr21/namma-airport/">
+    <img src="https://github.com/venkatr21/namma-airport/blob/master/frontend/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Namma Airport</h3>
@@ -55,8 +55,6 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-[![Namma Airport][product-screenshot]](https://github.com/venkatr21/)
 
 Namma Airport is an initiative to enhance and equip the bangalore international airport mobile application with AI enables features and improve the user experience. Feel free to clone, run and develop further.
 
@@ -222,7 +220,6 @@ Some of the opensourced softwares and packages really gave me a headstart to kic
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/venkatr21/namma-airport.svg?style=for-the-badge
 [contributors-url]: https://github.com/venkatr21/namma-airport/graphs/contributors
