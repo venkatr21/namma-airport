@@ -29,7 +29,7 @@ export function HomeScreen({userInfo, navigation}) {
                   <TouchableOpacity style={styles.serviceIcon} onPress={()=>{navigation.navigation.navigate('Flights')}}>
                     <Icon color={Theme.mainColour} name={'flight'} size={35} />
                   </TouchableOpacity>
-                  <Text style={styles.serviceTitle}>Boarding</Text>
+                  <Text style={styles.serviceTitle}>Flights</Text>
                 </View>
                 <View style={styles.serviceViewColumn}>
                   <TouchableOpacity style={styles.serviceIcon}>
