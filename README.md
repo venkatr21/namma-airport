@@ -191,7 +191,7 @@ _For tech implementation, please refer to the [Azure Docs](https://docs.microsof
 - [x] Hosting backend on Azure kubernetes
 - [ ] Multi-lingual support
 - [ ] Enhance Accessibility with text to speech
-- [ ] Realtime flight data support
+- [x] Realtime flight data support
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
