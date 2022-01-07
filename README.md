@@ -57,7 +57,7 @@
 
 ## About The Project
 
-Namma Airport is an initiative to enhance and equip the bangalore international airport mobile application with AI enables features and improve the user experience. Feel free to clone, run and develop further.
+Namma Airport is an initiative to enhance and equip the bangalore international airport mobile application with AI enabled features and improve the user experience. Feel free to clone, run and develop further.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
