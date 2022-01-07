@@ -45,6 +45,7 @@
       </ul>
     </li>
     <li><a href="#azure-services">Azure Services Used</a></li>
+    <li><a href="#application-screenshots">Application Screenshots</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -151,6 +152,24 @@ Namma Airport uses a variety of azure services for Personalized recommendation, 
 10. Azure Translator and Speech SDK
 
 _For tech implementation, please refer to the [Azure Docs](https://docs.microsoft.com/en-us/azure/?product=popular)_
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Application Screenshots -->
+
+## Application Screenshots
+
+<br />
+
+<img src="./assets/POC/signup.jpg" width="150" />
+<img src="./assets/POC/onboard.jpg" width="150" />
+<img src="./assets/POC/homescreen.jpg" width="150" />
+<img src="./assets/POC/flights.jpg" width="150" />
+<br/>
+<img src="./assets/POC/maps.jpg" width="150" />
+<img src="./assets/POC/cb1.jpg" width="150" />
+<img src="./assets/POC/cb2.jpg" width="150" />
+<img src="./assets/POC/menu.jpg" width="150" />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
