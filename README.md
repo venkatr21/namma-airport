@@ -161,16 +161,18 @@ _For tech implementation, please refer to the [Azure Docs](https://docs.microsof
 
 <br />
 <p float="left">
-<img src="./assets/POC/signup.jpg" width="150" />
-<img src="./assets/POC/onboard.jpg" width="150" />
-<img src="./assets/POC/homescreen.jpg" width="150" />
-<img src="./assets/POC/flights.jpg" width="150" />
+  <img src="./assets/POC/signup.jpg" width="150" />
+  <img src="./assets/POC/onboard.jpg" width="150" />
+  <img src="./assets/POC/homescreen.jpg" width="150" />
+  <img src="./assets/POC/flights.jpg" width="150" />
 </p>
 <br/>
-<img src="./assets/POC/maps.jpg" width="150" />
-<img src="./assets/POC/cb1.jpg" width="150" />
-<img src="./assets/POC/cb2.jpg" width="150" />
-<img src="./assets/POC/menu.jpg" width="150" />
+<p float="left">
+  <img src="./assets/POC/maps.jpg" width="150" />
+  <img src="./assets/POC/cb1.jpg" width="150" />
+  <img src="./assets/POC/cb2.jpg" width="150" />
+  <img src="./assets/POC/menu.jpg" width="150" />
+</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
